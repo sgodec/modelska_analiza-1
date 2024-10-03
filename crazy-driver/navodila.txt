@@ -1,1 +1,13 @@
-start
+Model voznje skozi samofor
+-Avto se pelje z hitrostjo v_0, pred nami se pojavi na dolzini L semafor vemo koliko, casa gori rdeca luc. Zelim pripeljati ravno v casu da se prizge zelena luc
+- Radi bi prijetno voznjo v(t)
+-nesmemo zapeljati v rdeco
+-pogoj ugodnosti
+-Lagnragovi multiplikatorji
+L = L(v,\dot{v})-\lambda v
+uvedemo multiplikator 
+sledi \d^2v = -\lambda/2
+v(t)=-\lambda/2 t^2 + At+B
+v(0)=B
+konstanta A, semafor zelimo prevoziti z ekstremalno hitrostjo \dot(v)(t_0) = 0
+Lambda dobimo iz pogoja L = \int{v(t)dt}
