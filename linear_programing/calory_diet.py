@@ -29,12 +29,12 @@ kalij (3500 mg) in sprejemljiv interval za natrij (500 mg – 2400 mg), ki so tu
 masa = 70
 
 #Optimiziramo
-minimum = 'Cena_EUR'
+minimum = 'proteini_g'
 
 #Omejitve
 min_energija = [2000,'energija_kcal']
 max_energija = [None,'energija_kcal']
-min_mascobe = [70,'mascobe_g']
+min_mascobe = [None,'mascobe_g']
 max_mascobe = [None,'mascobe_g']
 min_oghidrati = [310.,'ogljikovi_hidrati_g']
 max_oghidrati = [None,'ogljikovi_hidrati_g']
@@ -51,7 +51,7 @@ max_k = [None,'Kalij_mg']
 min_na = [None,'Natrij_mg']
 max_na = [None,'Natrij_mg']
 min_cena = [None,'Cena_EUR']
-max_cena = [None,'Cena_EUR']
+max_cena = [5,'Cena_EUR']
 min_teza = [None,'teza']
 max_teza = [2000.,'teza']
 min_sladkor = [None,'sladkor_g']
@@ -116,17 +116,6 @@ bar2 = ax1.bar(indices + bar_width/2, slack, bar_width,
               label=f'Izbrane kolicine',
               edgecolor='grey', linewidth=0.7)
 ax1.bar_label(bar2, padding=1, fmt='%.0f', fontsize=10)
-for i in indices:
-    max_val = dual_1[i]*b_1[1]*0.1
-    condition = f'y: {max_val:.2f}'
-    ax1.annotate(f'{condition}',
-                xy=(i, min(b_1)),
-                xytext=(0,5),
-                rotation = 0,
-                textcoords="offset points",
-                ha='center', va='bottom',
-                fontsize=8, fontweight='bold',
-                color='black')
 
 ax1.set_title('Omejitve pri dieti 1', fontsize=16, fontweight='bold', pad=15)
 ax1.set_ylabel('Količina', fontsize=14, labelpad=10)
@@ -136,7 +125,7 @@ ax1.set_xticklabels([i[1] for i in arr if i[0]!= None], rotation=45, ha='center'
 ax1.yaxis.grid(True, linestyle='--', which='major', color='grey', alpha=0.7)
 ax1.legend(title='Pogoji', fontsize=12, title_fontsize=13, loc='upper center') 
 plt.tight_layout()
-plt.savefig('maksimizacija_eur_pogoj1.pdf', format='pdf', dpi=300)
+plt.savefig('maksimizacija_proteinov_5_pogoj1.pdf', format='pdf', dpi=300)
 
 
 min_c[0] = 60.
@@ -204,7 +193,7 @@ bar3 = ax.bar(indices + bar_width, 100 * problem_3[index], bar_width,
               edgecolor='grey', linewidth=0.7)
 ax.bar_label(bar3, padding=5, fmt='%.0f', fontsize=8)
 
-ax.set_title('Maksimizacija stroskov ob danih pogojih', fontsize=16, fontweight='bold', pad=15)
+ax.set_title('Makismizacija proteinov ob danih pogojih', fontsize=16, fontweight='bold', pad=15)
 ax.set_ylabel('Količina hrane [g]', fontsize=14, labelpad=10)
 ax.set_xlabel('Živilo', fontsize=14, labelpad=10)
 
@@ -216,8 +205,7 @@ ax.yaxis.grid(True, linestyle='--', which='major', color='grey', alpha=0.7)
 ax.legend(title='Pogoji', fontsize=12, title_fontsize=13, loc='upper center')
 
 plt.tight_layout()
-plt.savefig('maksimizacija_eur.pdf', format='pdf', dpi=300)
-
+plt.savefig('maksimizacija_proteinov_5.pdf', format='pdf', dpi=300)
 slack = A_2 @ problem_2
 num_entries = len(slack)
 indices = np.arange(num_entries)
@@ -233,19 +221,7 @@ ax1.bar_label(bar1, padding=5, fmt='%.0f', fontsize=10)
 bar2 = ax1.bar(indices + bar_width/2, slack, bar_width,
               label=f'Izbrane kolicine',
               edgecolor='grey', linewidth=0.7)
-for i in indices:
-    max_val = dual_2[i]*b_2[i]*0.1
-    condition = f'y: {max_val:.2f}'
-    ax1.annotate(f'{condition}',
-                xy=(i, min(b_2)),
-                xytext=(0, 5),
-                rotation = 0,
-                textcoords="offset points",
-                ha='center', va='bottom',
-                fontsize=8, fontweight='bold',
-                color='black')
 
-ax1.bar_label(bar2, padding=1, fmt='%.0f', fontsize=10)
 ax1.set_title('Omejitve pri dieti 2', fontsize=16, fontweight='bold', pad=15)
 ax1.set_ylabel('Količina', fontsize=14, labelpad=10)
 ax1.set_xlabel('vsebina', fontsize=14, labelpad=10)
@@ -254,7 +230,7 @@ ax1.set_xticklabels([i[1] for i in arr_2 if i[0]!= None], rotation=45, ha='cente
 ax1.yaxis.grid(True, linestyle='--', which='major', color='grey', alpha=0.7)
 ax1.legend(title='Pogoji', fontsize=12, title_fontsize=13, loc='upper center') 
 plt.tight_layout()
-plt.savefig('maksimizacija_eur_pogoj2.pdf', format='pdf', dpi=300)
+plt.savefig('maksimizacija_proteinov_5_pogoj2.pdf', format='pdf', dpi=300)
 
 slack = A_3 @ problem_3
 num_entries = len(slack)
@@ -272,18 +248,6 @@ bar2 = ax1.bar(indices + bar_width/2, slack, bar_width,
               label=f'Izbrane kolicine',
               edgecolor='grey', linewidth=0.7)
 
-for i in indices:
-    max_val = dual_3[i]*b_3[i]*0.1
-    condition = f'y: {max_val:.2f}'
-    ax1.annotate(f'{condition}',
-                xy=(i, min(b_3)),
-                xytext=(0, 5),
-                rotation=0,
-                textcoords="offset points",
-                ha='center', va='bottom',
-                fontsize=8, fontweight='bold',
-                color='black')
-
 ax1.bar_label(bar2, padding=1, fmt='%.0f', fontsize=7.5)
 ax1.set_title('Omejitve pri dieti 3', fontsize=16, fontweight='bold', pad=15)
 ax1.set_ylabel('Količina', fontsize=14, labelpad=10)
@@ -293,5 +257,16 @@ ax1.set_xticklabels([i[1] for i in arr_3 if i[0]!= None], rotation=45, ha='cente
 ax1.yaxis.grid(True, linestyle='--', which='major', color='grey', alpha=0.7)
 ax1.legend(title='Pogoji', fontsize=12, title_fontsize=13, loc='lower center') 
 plt.tight_layout()
-plt.savefig('maksimizacija_eur_pogoj3.pdf', format='pdf', dpi=300)
+plt.savefig('maksimizacija_proteinov_5_pogoj3.pdf', format='pdf', dpi=300)
+
+with open('maksimizacija_proteinov_5.txt', 'w') as file:
+    file.write("Dual 1 Data:\n")
+    for number in dual_1:
+        file.write(f"{number}\n")  # Write each number from dual_1
+    file.write("\nDual 2 Data:\n")
+    for number in dual_2:
+        file.write(f"{number}\n")  # Write each number from dual_2
+    file.write("\nDual 3 Data:\n")
+    for number in dual_3:
+        file.write(f"{number}\n")  # Write each number from dual_3
 
