@@ -17,9 +17,14 @@ food_dict = pd.read_csv('zivila_2.csv')
 #x >= 0
 
 sns.set(style="whitegrid")
-sns.set_palette("colorblind")
+set2_palette = sns.color_palette("Set2")[2:]
+sns.set_palette(set2_palette)
 
-food_dict['teza'] = [100.]*len(food_dict)
+
+
+
+
+food_dict['Teza_g'] = [100.]*len(food_dict)
 #1)
 '''Minimiziraj kolicino kalorij, ce je priporocen minimalni dnevni vnos 70 g mascob, 310 g ogljikovih
 hidratov, 50 g proteinov, 1000 mg kalcija ter 18 mg zeleza. Dnevni obroki naj kolicinsko ne
@@ -29,12 +34,12 @@ kalij (3500 mg) in sprejemljiv interval za natrij (500 mg – 2400 mg), ki so tu
 masa = 70
 
 #Optimiziramo
-minimum = 'proteini_g'
+minimum = 'Cena_EUR'
 
 #Omejitve
 min_energija = [2000,'energija_kcal']
 max_energija = [None,'energija_kcal']
-min_mascobe = [None,'mascobe_g']
+min_mascobe = [70,'mascobe_g']
 max_mascobe = [None,'mascobe_g']
 min_oghidrati = [310.,'ogljikovi_hidrati_g']
 max_oghidrati = [None,'ogljikovi_hidrati_g']
@@ -51,9 +56,9 @@ max_k = [None,'Kalij_mg']
 min_na = [None,'Natrij_mg']
 max_na = [None,'Natrij_mg']
 min_cena = [None,'Cena_EUR']
-max_cena = [5,'Cena_EUR']
-min_teza = [None,'teza']
-max_teza = [2000.,'teza']
+max_cena = [None,'Cena_EUR']
+min_Teza_g = [None,'Teza_g']
+max_Teza_g = [2000.,'Teza_g']
 min_sladkor = [None,'sladkor_g']
 max_sladkor = [None,'sladkor_g']
 min_vlaknine = [None,'vlaknine_g']
@@ -80,7 +85,7 @@ max_Tryptophan_g = [None,'Tryptophan_g']
 
 
 #matrix of restrictions
-arr = [min_energija,max_energija,min_mascobe,max_mascobe,min_oghidrati,max_oghidrati,min_proteini,max_proteini,min_ca,max_ca,min_fe,max_fe,min_c,max_c,min_k,max_k,min_na,max_na,min_cena,max_cena,min_teza,max_teza,min_sladkor,max_sladkor,min_vlaknine,max_vlaknine,min_satfat,max_satfat,min_Histidine_g,max_Histidine_g, min_Isoleucine_g,max_Isoleucine_g,min_Leucine_g,max_Leucine_g,min_Lysine_g,max_Lysine_g,min_Methionine_g,max_Methionine_g,min_Phenylalanine_g,max_Phenylalanine_g,min_Threonine_g,max_Threonine_g ,min_Tryptophan_g,max_Tryptophan_g]
+arr = [min_energija,max_energija,min_mascobe,max_mascobe,min_oghidrati,max_oghidrati,min_proteini,max_proteini,min_ca,max_ca,min_fe,max_fe,min_cena,max_cena,min_Teza_g,max_Teza_g]
 
 #bounds for each food
 bounds = [(0,None)]*len(food_dict)
@@ -92,7 +97,7 @@ def linear_program(arr,minimum,bounds):
         return A,b
     
     A, b = constraint(arr)
-    c = -np.array( food_dict[minimum].tolist())
+    c = np.array( food_dict[minimum].tolist())
     result = linprog(c, A_ub= A, b_ub= b, bounds=bounds, method='highs')
 
     if result.success:
@@ -108,24 +113,23 @@ bar_width = 0.35
 
 fig1, ax1 = plt.subplots(figsize=(16,9))
 
-bar1 = ax1.bar(indices - bar_width/2, b_1, bar_width,
+bar1 = ax1.barh(indices - bar_width/2, b_1, bar_width,
               label=f'Omejitve',
               edgecolor='grey', linewidth=0.7)
 ax1.bar_label(bar1, padding=5, fmt='%.0f', fontsize=10)
-bar2 = ax1.bar(indices + bar_width/2, slack, bar_width,
+bar2 = ax1.barh(indices + bar_width/2, slack, bar_width,
               label=f'Izbrane kolicine',
               edgecolor='grey', linewidth=0.7)
 ax1.bar_label(bar2, padding=1, fmt='%.0f', fontsize=10)
 
 ax1.set_title('Omejitve pri dieti 1', fontsize=16, fontweight='bold', pad=15)
-ax1.set_ylabel('Količina', fontsize=14, labelpad=10)
-ax1.set_xlabel('vsebina', fontsize=14, labelpad=10)
-ax1.set_xticks(indices)
-ax1.set_xticklabels([i[1] for i in arr if i[0]!= None], rotation=45, ha='center', fontsize=12)
+ax1.set_xlabel('Kolicina', fontsize=14, labelpad=10)
+ax1.set_yticks(indices)
+ax1.set_yticklabels([i[1] for i in arr if i[0]!= None], rotation=0, ha='right', fontsize=10)
 ax1.yaxis.grid(True, linestyle='--', which='major', color='grey', alpha=0.7)
-ax1.legend(title='Pogoji', fontsize=12, title_fontsize=13, loc='upper center') 
+ax1.legend(title='Dosezene vrednosti', fontsize=12, title_fontsize=13, loc='upper left') 
 plt.tight_layout()
-plt.savefig('maksimizacija_proteinov_5_pogoj1.pdf', format='pdf', dpi=300)
+#plt.savefig('minimizacija_mascob_pogoj1.pdf', format='pdf', dpi=300)
 
 
 min_c[0] = 60.
@@ -133,7 +137,7 @@ min_k[0] = 3500.
 min_na[0] = 500.
 max_na[0] = 2400.
 
-arr_2 = [min_energija,max_energija,min_mascobe,max_mascobe,min_oghidrati,max_oghidrati,min_proteini,max_proteini,min_ca,max_ca,min_fe,max_fe,min_c,max_c,min_k,max_k,min_na,max_na,min_cena,max_cena,min_teza,max_teza,min_sladkor,max_sladkor,min_vlaknine,max_vlaknine,min_satfat,max_satfat,min_Histidine_g,max_Histidine_g, min_Isoleucine_g,max_Isoleucine_g,min_Leucine_g,max_Leucine_g,min_Lysine_g,max_Lysine_g,min_Methionine_g,max_Methionine_g,min_Phenylalanine_g,max_Phenylalanine_g,min_Threonine_g,max_Threonine_g ,min_Tryptophan_g,max_Tryptophan_g]
+arr_2 = [min_energija,max_energija,min_mascobe,max_mascobe,min_oghidrati,max_oghidrati,min_proteini,max_proteini,min_ca,max_ca,min_fe,max_fe,min_c,max_c,min_k,max_k,min_na,max_na,min_cena,max_cena,min_Teza_g,max_Teza_g]
 
 problem_2, final_2, slack_2,A_2,b_2,dual_2 = linear_program(arr_2,minimum,bounds)
 
@@ -160,13 +164,10 @@ max_Threonine_g = [None,'Threonine_g']
 min_Tryptophan_g = [0.004*masa,'Tryptophan_g']
 max_Tryptophan_g = [None,'Tryptophan_g']
 
-arr_3 = [min_energija,max_energija,min_mascobe,max_mascobe,min_oghidrati,max_oghidrati,min_proteini,max_proteini,min_ca,max_ca,min_fe,max_fe,min_c,max_c,min_k,max_k,min_na,max_na,min_cena,max_cena,min_teza,max_teza,min_sladkor,max_sladkor,min_vlaknine,max_vlaknine,min_satfat,max_satfat,min_Histidine_g,max_Histidine_g, min_Isoleucine_g,max_Isoleucine_g,min_Leucine_g,max_Leucine_g,min_Lysine_g,max_Lysine_g,min_Methionine_g,max_Methionine_g,min_Phenylalanine_g,max_Phenylalanine_g,min_Threonine_g,max_Threonine_g ,min_Tryptophan_g,max_Tryptophan_g]
+arr_3 = [min_energija,max_energija,min_mascobe,max_mascobe,min_oghidrati,max_oghidrati,min_proteini,max_proteini,min_ca,max_ca,min_fe,max_fe,min_c,max_c,min_k,max_k,min_na,max_na,min_cena,max_cena,min_Teza_g,max_Teza_g,min_sladkor,max_sladkor,min_vlaknine,max_vlaknine,min_satfat,max_satfat,min_Histidine_g,max_Histidine_g, min_Isoleucine_g,max_Isoleucine_g,min_Leucine_g,max_Leucine_g,min_Lysine_g,max_Lysine_g,min_Methionine_g,max_Methionine_g,min_Phenylalanine_g,max_Phenylalanine_g,min_Threonine_g,max_Threonine_g ,min_Tryptophan_g,max_Tryptophan_g]
 
 problem_3, final_3, slack_3, A_3, b_3,dual_3 = linear_program(arr_3,minimum,bounds)
 
-
-sns.set(style="whitegrid")
-sns.set_palette("colorblind")
 
 index = np.logical_or(problem_1 > 0.0, problem_2 > 0.0)
 index = np.logical_or(index, problem_3 > 0.0)
@@ -178,34 +179,34 @@ bar_width = 0.25
 
 fig, ax = plt.subplots(figsize=(16,9))
 
-bar1 = ax.bar(indices - bar_width, 100 * problem_1[index], bar_width,
+bar1 = ax.barh(indices - bar_width, 100 * problem_1[index], bar_width,
               label=f'Pogoj 1: {minimum} ({final_1:.1f})',
               edgecolor='grey', linewidth=0.7)
 ax.bar_label(bar1, padding=5, fmt='%.0f', fontsize=8)
 
-bar2 = ax.bar(indices, 100 * problem_2[index], bar_width,
+bar2 = ax.barh(indices, 100 * problem_2[index], bar_width,
               label=f'Pogoj 2: {minimum} ({final_2:.1f})',
               edgecolor='grey', linewidth=0.7)
 ax.bar_label(bar2, padding=5, fmt='%.0f', fontsize=8)
 
-bar3 = ax.bar(indices + bar_width, 100 * problem_3[index], bar_width,
+bar3 = ax.barh(indices + bar_width, 100 * problem_3[index], bar_width,
               label=f'Pogoj 3: {minimum} ({final_3:.1f})',
               edgecolor='grey', linewidth=0.7)
 ax.bar_label(bar3, padding=5, fmt='%.0f', fontsize=8)
 
-ax.set_title('Makismizacija proteinov ob danih pogojih', fontsize=16, fontweight='bold', pad=15)
-ax.set_ylabel('Količina hrane [g]', fontsize=14, labelpad=10)
-ax.set_xlabel('Živilo', fontsize=14, labelpad=10)
+ax.set_title('Minimizacija mascob ob danih pogojih', fontsize=16, fontweight='bold', pad=15)
+ax.set_xlabel('Količina hrane [g]', fontsize=14, labelpad=10)
+ax.set_ylabel('Živilo', fontsize=14, labelpad=10)
 
-ax.set_xticks(indices)
-ax.set_xticklabels(food_dict['zivilo'][index], rotation=0, ha='center', fontsize=12)
+ax.set_yticks(indices)
+ax.set_yticklabels(food_dict['zivilo'][index], rotation=0, ha='right', fontsize=12)
 
 ax.yaxis.grid(True, linestyle='--', which='major', color='grey', alpha=0.7)
 
-ax.legend(title='Pogoji', fontsize=12, title_fontsize=13, loc='upper center')
+ax.legend(title='Pogoji', fontsize=12, title_fontsize=13, loc='upper right')
 
 plt.tight_layout()
-plt.savefig('maksimizacija_proteinov_5.pdf', format='pdf', dpi=300)
+#plt.savefig('minimizacija_mascob.pdf', format='pdf', dpi=300)
 slack = A_2 @ problem_2
 num_entries = len(slack)
 indices = np.arange(num_entries)
@@ -214,23 +215,23 @@ bar_width = 0.35
 
 fig1, ax1 = plt.subplots(figsize=(16,9))
 
-bar1 = ax1.bar(indices - bar_width/2, b_2, bar_width,
+bar1 = ax1.barh(indices - bar_width/2, b_2, bar_width,
               label=f'Omejitve',
               edgecolor='grey', linewidth=0.7)
 ax1.bar_label(bar1, padding=5, fmt='%.0f', fontsize=10)
-bar2 = ax1.bar(indices + bar_width/2, slack, bar_width,
+bar2 = ax1.barh(indices + bar_width/2, slack, bar_width,
               label=f'Izbrane kolicine',
               edgecolor='grey', linewidth=0.7)
 
 ax1.set_title('Omejitve pri dieti 2', fontsize=16, fontweight='bold', pad=15)
-ax1.set_ylabel('Količina', fontsize=14, labelpad=10)
-ax1.set_xlabel('vsebina', fontsize=14, labelpad=10)
-ax1.set_xticks(indices)
-ax1.set_xticklabels([i[1] for i in arr_2 if i[0]!= None], rotation=45, ha='center', fontsize=12)
+ax1.set_xlabel('Količina', fontsize=14, labelpad=10)
+ax1.set_ylabel('vsebina', fontsize=14, labelpad=10)
+ax1.set_yticks(indices)
+ax1.set_yticklabels([i[1] for i in arr_2 if i[0]!= None], rotation=0, ha='right', fontsize=10)
 ax1.yaxis.grid(True, linestyle='--', which='major', color='grey', alpha=0.7)
-ax1.legend(title='Pogoji', fontsize=12, title_fontsize=13, loc='upper center') 
+ax1.legend(title='Pogoji', fontsize=12, title_fontsize=13, loc='upper left') 
 plt.tight_layout()
-plt.savefig('maksimizacija_proteinov_5_pogoj2.pdf', format='pdf', dpi=300)
+#plt.savefig('minimizacija_mascob_pogoj2.pdf', format='pdf', dpi=300)
 
 slack = A_3 @ problem_3
 num_entries = len(slack)
@@ -240,33 +241,79 @@ bar_width = 0.35
 
 fig1, ax1 = plt.subplots(figsize=(16,9))
 
-bar1 = ax1.bar(indices - bar_width/2, b_3, bar_width,
+bar1 = ax1.barh(indices - bar_width/2, b_3, bar_width,
               label=f'Omejitve',
               edgecolor='grey', linewidth=0.7)
 ax1.bar_label(bar1, padding=10, fmt='%.0f', fontsize=7.5)
-bar2 = ax1.bar(indices + bar_width/2, slack, bar_width,
+bar2 = ax1.barh(indices + bar_width/2, slack, bar_width,
               label=f'Izbrane kolicine',
               edgecolor='grey', linewidth=0.7)
 
 ax1.bar_label(bar2, padding=1, fmt='%.0f', fontsize=7.5)
 ax1.set_title('Omejitve pri dieti 3', fontsize=16, fontweight='bold', pad=15)
-ax1.set_ylabel('Količina', fontsize=14, labelpad=10)
-ax1.set_xlabel('vsebina', fontsize=14, labelpad=10)
-ax1.set_xticks(indices)
-ax1.set_xticklabels([i[1] for i in arr_3 if i[0]!= None], rotation=45, ha='center', fontsize=12)
+ax1.set_xlabel('Količina', fontsize=14, labelpad=10)
+ax1.set_ylabel('vsebina', fontsize=14, labelpad=10)
+ax1.set_yticks(indices)
+ax1.set_yticklabels([i[1] for i in arr_3 if i[0]!= None], rotation=0, ha='right', fontsize=12)
 ax1.yaxis.grid(True, linestyle='--', which='major', color='grey', alpha=0.7)
-ax1.legend(title='Pogoji', fontsize=12, title_fontsize=13, loc='lower center') 
+ax1.legend(title='Pogoji', fontsize=12, title_fontsize=13, loc='upper left') 
 plt.tight_layout()
-plt.savefig('maksimizacija_proteinov_5_pogoj3.pdf', format='pdf', dpi=300)
+#plt.savefig('minimizacija_mascob_pogoj3.pdf', format='pdf', dpi=300)
+# Function to generate LaTeX table for constraints and dual variables
+all_latex_tables = ""
 
-with open('maksimizacija_proteinov_5.txt', 'w') as file:
-    file.write("Dual 1 Data:\n")
-    for number in dual_1:
-        file.write(f"{number}\n")  # Write each number from dual_1
-    file.write("\nDual 2 Data:\n")
-    for number in dual_2:
-        file.write(f"{number}\n")  # Write each number from dual_2
-    file.write("\nDual 3 Data:\n")
-    for number in dual_3:
-        file.write(f"{number}\n")  # Write each number from dual_3
+# Function to generate LaTeX table for constraints and dual variables
+def generate_latex_table(arr, dual_vars, problem_number):
+    constraint_list = []
+    constraint_index = 0
 
+    for i in range(len(arr)):
+        if arr[i][0] != None:
+            RHS_value = arr[i][0]
+            variable_name = arr[i][1]
+
+            # Determine constraint type
+            if i % 2 == 0:
+                constraint_type = '$\\geq$'
+            else:
+                constraint_type = '$\\leq$'
+
+            # Get the dual variable value
+            dual_value = dual_vars[constraint_index]
+
+            # Store the constraint
+            constraint_list.append([variable_name, constraint_type, RHS_value, dual_value*RHS_value*0.1])
+
+            # Increment constraint_index
+            constraint_index += 1
+
+    # Generate LaTeX table
+    latex_table = f"\\begin{{table}}[h!]\n\\centering\n\\begin{{tabular}}{{|l|c|c|c|}}\n\\hline\n"
+    latex_table += "Constraint & Type & RHS Value & Dual Variable \\\\\n\\hline\n"
+
+    for constraint in constraint_list:
+        variable_name = constraint[0]
+        constraint_type = constraint[1]
+        RHS_value = constraint[2]
+        dual_value = constraint[3]
+        latex_table += f"{variable_name} & {constraint_type} & {RHS_value} & {dual_value:.4f} \\\\\n"
+
+    latex_table += "\\hline\n\\end{tabular}\n"
+    latex_table += f"\\caption{{Constraints and Dual Variables for Problem {problem_number}}}\n"
+    latex_table += f"\\label{{tab:problem{problem_number}_constraints}}\n\\end{{table}}\n\n"
+
+    return latex_table
+
+# Generate LaTeX tables for each problem and append to all_latex_tables
+latex_table_1 = generate_latex_table(arr, dual_1, 1)
+latex_table_2 = generate_latex_table(arr_2, dual_2, 2)
+latex_table_3 = generate_latex_table(arr_3, dual_3, 3)
+
+all_latex_tables = latex_table_1 + latex_table_2 + latex_table_3
+
+# Save all LaTeX tables to a single text file
+filename = "latex_tables_all_problems.txt"
+with open(filename, 'w') as file:
+    file.write(all_latex_tables)
+
+print(f"All LaTeX tables saved to {filename}")

@@ -1,0 +1,76 @@
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+Constraint & Type & RHS Value & Dual Variable \\
+\hline
+energija_kcal & $\geq$ & 2000 & -0.0138 \\
+mascobe_g & $\geq$ & 70 & -0.0517 \\
+ogljikovi_hidrati_g & $\geq$ & 310.0 & -0.0026 \\
+proteini_g & $\geq$ & 50.0 & -0.0000 \\
+Ca_mg & $\geq$ & 1000.0 & -0.0633 \\
+Fe_mg & $\geq$ & 18.0 & -0.0000 \\
+Teza_g & $\leq$ & 2000.0 & -0.0000 \\
+\hline
+\end{tabular}
+\caption{Constraints and Dual Variables for Problem 1}
+\label{tab:problem1_constraints}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+Constraint & Type & RHS Value & Dual Variable \\
+\hline
+energija_kcal & $\geq$ & 2000 & -0.0000 \\
+mascobe_g & $\geq$ & 70 & -0.0127 \\
+ogljikovi_hidrati_g & $\geq$ & 310.0 & -0.0000 \\
+proteini_g & $\geq$ & 50.0 & -0.0000 \\
+Ca_mg & $\geq$ & 1000.0 & -0.0653 \\
+Fe_mg & $\geq$ & 18.0 & -0.0000 \\
+Vitamin_C_mg & $\geq$ & 60.0 & -0.0022 \\
+Kalij_mg & $\geq$ & 3500.0 & -0.0629 \\
+Natrij_mg & $\geq$ & 500.0 & -0.0000 \\
+Natrij_mg & $\leq$ & 2400.0 & -0.0000 \\
+Teza_g & $\leq$ & 2000.0 & -0.0000 \\
+\hline
+\end{tabular}
+\caption{Constraints and Dual Variables for Problem 2}
+\label{tab:problem2_constraints}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+Constraint & Type & RHS Value & Dual Variable \\
+\hline
+energija_kcal & $\geq$ & 2000 & -0.0000 \\
+mascobe_g & $\geq$ & 70 & -0.1336 \\
+ogljikovi_hidrati_g & $\geq$ & 310.0 & -0.0000 \\
+proteini_g & $\geq$ & 50.0 & -0.0000 \\
+Ca_mg & $\geq$ & 1000.0 & -0.2001 \\
+Fe_mg & $\geq$ & 18.0 & -0.0000 \\
+Vitamin_C_mg & $\geq$ & 60.0 & -0.0010 \\
+Kalij_mg & $\geq$ & 3500.0 & -0.0213 \\
+Natrij_mg & $\geq$ & 500.0 & -0.0000 \\
+Natrij_mg & $\leq$ & 2400.0 & -0.0276 \\
+Teza_g & $\leq$ & 2000.0 & -0.0000 \\
+sladkor_g & $\leq$ & 25.0 & -0.0199 \\
+vlaknine_g & $\geq$ & 30.0 & -0.0000 \\
+vlaknine_g & $\leq$ & 80.0 & -0.0000 \\
+nasicene_mascobe_g & $\leq$ & 15.0 & -0.1190 \\
+Histidine_g & $\geq$ & 0.7000000000000001 & -0.0000 \\
+Isoleucine_g & $\geq$ & 1.4000000000000001 & -0.0000 \\
+Leucine_g & $\geq$ & 2.73 & -0.0000 \\
+Lysine_g & $\geq$ & 2.1 & -0.0000 \\
+Methionine_g & $\geq$ & 1.05 & -0.0000 \\
+Phenylalanine_g & $\geq$ & 1.75 & -0.0000 \\
+Tryptophan_g & $\geq$ & 0.28 & -0.0000 \\
+\hline
+\end{tabular}
+\caption{Constraints and Dual Variables for Problem 3}
+\label{tab:problem3_constraints}
+\end{table}
+
