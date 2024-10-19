@@ -43,74 +43,545 @@
 !_TAG_ROLE_DESCRIPTION!Python!module	namespace	/namespace from where classes\/variables\/functions are imported/
 !_TAG_ROLE_DESCRIPTION!Python!unknown	imported	/imported from the other module/
 !_TAG_ROLE_DESCRIPTION!Python!unknown	indirectlyImported	/classes\/variables\/functions\/modules imported in alternative name/
-A	linear_programing/calory_diet.py	/^A = [[0] + food_dict[key][1:6] + [-1] for key in food_dict.keys()]$/;"	v
-A	linear_programing/calory_diet.py	/^A = [[0] + food_dict[key][1:9] + [-food_dict[key][8]] + [-1] for key in food_dict.keys()]$/;"	v
-A	linear_programing/calory_diet.py	/^A = [[food_dict[key][0]] + [0] + food_dict[key][2:6] + [-1] for key in food_dict.keys()]$/;"	v
-A	linear_programing/calory_diet.py	/^A = [[food_dict[key][0]] + [0] + food_dict[key][2:9] + [-food_dict[key][8]] + [-1] for key in fo/;"	v
-A	linear_programing/calory_diet.py	/^A = [food_dict[key][:9] + [-food_dict[key][8]] + [-1] + [0] for key in food_dict.keys()]$/;"	v
-A	linear_programing/calory_diet.py	/^A = np.array(A).T$/;"	v
-A	linear_programing/whole_number_diat.py	/^A = np.array([rules[index]*np.array(food_dict[col].tolist()) for index,col in enumerate(columns_/;"	v
-b	linear_programing/calory_diet.py	/^b = np.array([0,70,310,50,1000,18,-20])$/;"	v
-b	linear_programing/calory_diet.py	/^b = np.array([0,70,310,50,1000,18,60,3500,500,-2400,-20])$/;"	v
-b	linear_programing/calory_diet.py	/^b = np.array([2000,0,310,50,1000,18,-20])$/;"	v
-b	linear_programing/calory_diet.py	/^b = np.array([2000,0,310,50,1000,18,60,3500,500,-2400,-20])$/;"	v
-b	linear_programing/calory_diet.py	/^b = np.array([2000,60,310,50,1000,18,60,3500,500,-2400,-20,0])$/;"	v
-b	linear_programing/whole_number_diat.py	/^b = np.array([2000,-4000,60,310,50,1000,18,60,3500,500,-2400,-2000,0])$/;"	v
-bounds	linear_programing/calory_diet.py	/^bounds = [(0,None) for i in c]$/;"	v
-bounds	linear_programing/whole_number_diat.py	/^bounds = Bounds(0, np.inf)$/;"	v
-c	linear_programing/calory_diet.py	/^c = [food_dict[key][-1] for key in food_dict.keys()]$/;"	v
-c	linear_programing/calory_diet.py	/^c = [food_dict[key][0] for key in food_dict.keys()]$/;"	v
-c	linear_programing/calory_diet.py	/^c = [food_dict[key][1] for key in food_dict.keys()]$/;"	v
-c	linear_programing/whole_number_diat.py	/^c = food_dict['Cena[EUR]'].tolist()$/;"	v
+A1	linear_programing/test.py	/^        x1, fun1, slack1, A1, b1, dual1 = solution1$/;"	v
+A2	linear_programing/test.py	/^        x2, fun2, slack2, A2, b2, dual2 = solution2$/;"	v
+A3	linear_programing/test.py	/^        x3, fun3, slack3, A3, b3, dual3 = solution3$/;"	v
+A_1	linear_programing/calory_diet.py	/^problem_1, final_1, slack_1, A_1, b_1, dual_1 = linear_program(arr,minimum,bounds)$/;"	v
+A_2	linear_programing/calory_diet.py	/^problem_2, final_2, slack_2,A_2,b_2,dual_2 = linear_program(arr_2,minimum,bounds)$/;"	v
+A_3	linear_programing/calory_diet.py	/^problem_3, final_3, slack_3, A_3, b_3,dual_3 = linear_program(arr_3,minimum,bounds)$/;"	v
+A_ab	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^    A_ab = ellipse_area(a, b)$/;"	v
+A_n	numerica_minimisation/thomson_circle.py	/^    A_n = superellipse_area(n)$/;"	v
+A_n	numerica_minimisation/thomson_circle_energy.py	/^    A_n = superellipse_area(n)$/;"	v
+A_n	numerica_minimisation/thomson_circle_energy_a_b.py	/^        A_n = superellipse_area(n, a, b)$/;"	v
+A_target	numerica_minimisation/thomson_circle.py	/^A_target = np.pi$/;"	v
+A_target	numerica_minimisation/thomson_circle_energy.py	/^A_target = np.pi$/;"	v
+A_target	numerica_minimisation/thomson_circle_energy_a_b.py	/^A_target = np.pi$/;"	v
+A_target	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^A_target = np.pi$/;"	v
+E	numerica_minimisation/comparison_algorithm.py	/^def E(phi, N, charge_products):$/;"	f
+E	numerica_minimisation/dipol_quadropol.py	/^    def E(phi):$/;"	f
+E	numerica_minimisation/drawing_potencial.py	/^def E(phi,n=2):$/;"	f
+E	numerica_minimisation/energy_distance.py	/^    def E(phi):$/;"	f
+E	numerica_minimisation/energy_over_n.py	/^    def E(phi):$/;"	f
+E	numerica_minimisation/test.py	/^def E(angles, N):$/;"	f
+E	numerica_minimisation/thomson_circle.py	/^    def E(phi):$/;"	f
+E	numerica_minimisation/thomson_circle_energy.py	/^        def E(phi):$/;"	f
+E	numerica_minimisation/thomson_circle_energy_a_b.py	/^            def E(phi):$/;"	f
+E	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^        def E(phi):$/;"	f
+E	numerica_minimisation/thomson_problem.py	/^    def E(phi):$/;"	f
+E_simulated_annealing	numerica_minimisation/comparison_algorithm.py	/^def E_simulated_annealing(phi, N, charge_products):$/;"	f
+N	numerica_minimisation/drawing_potencial.py	/^N = 2$/;"	v
+N_new	numerica_minimisation/dipol_quadropol.py	/^N_new = []$/;"	v
+N_new	numerica_minimisation/energy_distance.py	/^N_new = np.logspace(np.log10(2),np.log10(150),num=20,dtype=int)$/;"	v
+N_values	numerica_minimisation/test.py	/^N_values = np.unique(np.round(np.logspace(np.log10(2), np.log10(50), num=15)).astype(int))$/;"	v
+N_values_extended	numerica_minimisation/comparison_algorithm.py	/^N_values_extended = list(range(2, 31))$/;"	v
+Ns	numerica_minimisation/dipol_quadropol.py	/^Ns = range(2, 40)$/;"	v
+Ns	numerica_minimisation/energy_over_n.py	/^Ns = 8$/;"	v
+Ns	numerica_minimisation/test.py	/^        Ns, errs = zip(*errors[method])$/;"	v
+Ns	numerica_minimisation/thomson_circle.py	/^Ns = range(2, 14)$/;"	v
+Ns	numerica_minimisation/thomson_circle_energy.py	/^Ns = range(2, 14)$/;"	v
+Ns	numerica_minimisation/thomson_circle_energy_a_b.py	/^Ns = range(2, 14)$/;"	v
+Ns	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^Ns = range(2, 20)$/;"	v
+Ns	numerica_minimisation/thomson_problem.py	/^Ns = range(2,14)$/;"	v
+Q	numerica_minimisation/dipol_quadropol.py	/^    Q = np.zeros((3, 3))$/;"	v
+a	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^    a = ratio * b  # Set 'a' based on the desired aspect ratio$/;"	v
+a_values	numerica_minimisation/thomson_circle_energy_a_b.py	/^a_values = [1, 2, 3]  # Different horizontal scaling factors$/;"	v
+all_latex_tables	linear_programing/calory_diet.py	/^all_latex_tables = ""$/;"	v
+all_latex_tables	linear_programing/calory_diet.py	/^all_latex_tables = latex_table_1 + latex_table_2 + latex_table_3$/;"	v
+arr	linear_programing/calory_diet.py	/^arr = [min_energija,max_energija,min_mascobe,max_mascobe,min_oghidrati,max_oghidrati,min_protein/;"	v
+arr	linear_programing/whole_number_diat.py	/^arr = [min_energija,max_energija,min_mascobe,max_mascobe,min_oghidrati,max_oghidrati,min_protein/;"	v
+arr_2	linear_programing/calory_diet.py	/^arr_2 = [min_energija,max_energija,min_mascobe,max_mascobe,min_oghidrati,max_oghidrati,min_prote/;"	v
+arr_2	linear_programing/whole_number_diat.py	/^arr_2 = [min_energija,max_energija,min_mascobe,max_mascobe,min_oghidrati,max_oghidrati,min_prote/;"	v
+arr_3	linear_programing/calory_diet.py	/^arr_3 = [min_energija,max_energija,min_mascobe,max_mascobe,min_oghidrati,max_oghidrati,min_prote/;"	v
+arr_3	linear_programing/whole_number_diat.py	/^arr_3 = [min_energija,max_energija,min_mascobe,max_mascobe,min_oghidrati,max_oghidrati,min_prote/;"	v
+arr_diet1	linear_programing/test.py	/^arr_diet1 = [$/;"	v
+arr_diet2	linear_programing/test.py	/^arr_diet2 = arr_diet1.copy()$/;"	v
+arr_diet3	linear_programing/test.py	/^arr_diet3 = arr_diet2.copy()$/;"	v
+aspect_ratios	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^aspect_ratios = np.linspace(0.1, 10, 15)  # Aspect ratio a\/b, ranging from thin to wide ellipse/;"	v
+ax	linear_programing/calory_diet.py	/^fig, ax = plt.subplots(figsize=(16,9))$/;"	v
+ax	linear_programing/whole_number_diat.py	/^fig, ax = plt.subplots(figsize=(16,9))$/;"	v
+ax	numerica_minimisation/drawing_potencial.py	/^ax = fig.add_subplot(111, projection='3d')$/;"	v
+ax	numerica_minimisation/energy_distance.py	/^fig, ax = plt.subplots(1,2,figsize=(16,9))$/;"	v
+ax	numerica_minimisation/energy_over_n.py	/^fig, ax = plt.subplots(figsize=(16,9))$/;"	v
+ax	numerica_minimisation/thomson_circle.py	/^    ax = fig.add_subplot(3, 4, idx)$/;"	v
+ax	numerica_minimisation/thomson_problem.py	/^    ax = fig.add_subplot(3, 4, idx, projection='3d')$/;"	v
+ax1	linear_programing/calory_diet.py	/^fig1, ax1 = plt.subplots(figsize=(16,9))$/;"	v
+ax1	numerica_minimisation/dipol_quadropol.py	/^fig, ax1 = plt.subplots(figsize=(12, 8))$/;"	v
+ax2	numerica_minimisation/dipol_quadropol.py	/^ax2 = ax1.twinx()$/;"	v
+axs	linear_programing/test.py	/^fig, axs = plt.subplots(1, 2, figsize=(16, 6))$/;"	v
+b	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^b = 1$/;"	v
+b1	linear_programing/test.py	/^        x1, fun1, slack1, A1, b1, dual1 = solution1$/;"	v
+b2	linear_programing/test.py	/^        x2, fun2, slack2, A2, b2, dual2 = solution2$/;"	v
+b3	linear_programing/test.py	/^        x3, fun3, slack3, A3, b3, dual3 = solution3$/;"	v
+b_1	linear_programing/calory_diet.py	/^problem_1, final_1, slack_1, A_1, b_1, dual_1 = linear_program(arr,minimum,bounds)$/;"	v
+b_2	linear_programing/calory_diet.py	/^problem_2, final_2, slack_2,A_2,b_2,dual_2 = linear_program(arr_2,minimum,bounds)$/;"	v
+b_3	linear_programing/calory_diet.py	/^problem_3, final_3, slack_3, A_3, b_3,dual_3 = linear_program(arr_3,minimum,bounds)$/;"	v
+b_values	numerica_minimisation/thomson_circle_energy_a_b.py	/^b_values = [1, 0.5, 0.33]  # Different vertical scaling factors (to maintain area)$/;"	v
+bar1	linear_programing/calory_diet.py	/^bar1 = ax.barh(indices - bar_width, 100 * problem_1[index], bar_width,$/;"	v
+bar1	linear_programing/calory_diet.py	/^bar1 = ax1.barh(indices - bar_width\/2, b_1, bar_width,$/;"	v
+bar1	linear_programing/calory_diet.py	/^bar1 = ax1.barh(indices - bar_width\/2, b_2, bar_width,$/;"	v
+bar1	linear_programing/calory_diet.py	/^bar1 = ax1.barh(indices - bar_width\/2, b_3, bar_width,$/;"	v
+bar1	linear_programing/whole_number_diat.py	/^bar1 = ax.barh(indices - bar_width, food_dict['quantity_g'].iloc[index].values * problem_1[index/;"	v
+bar2	linear_programing/calory_diet.py	/^bar2 = ax.barh(indices, 100 * problem_2[index], bar_width,$/;"	v
+bar2	linear_programing/calory_diet.py	/^bar2 = ax1.barh(indices + bar_width\/2, slack, bar_width,$/;"	v
+bar2	linear_programing/whole_number_diat.py	/^bar2 = ax.barh(indices, food_dict['quantity_g'].iloc[index].values * problem_2[index], bar_width/;"	v
+bar3	linear_programing/calory_diet.py	/^bar3 = ax.barh(indices + bar_width, 100 * problem_3[index], bar_width,$/;"	v
+bar3	linear_programing/whole_number_diat.py	/^bar3 = ax.barh(indices + bar_width, food_dict['quantity_g'].iloc[index].values * problem_3[index/;"	v
+bar_width	linear_programing/calory_diet.py	/^bar_width = 0.25  $/;"	v
+bar_width	linear_programing/calory_diet.py	/^bar_width = 0.35  $/;"	v
+bar_width	linear_programing/whole_number_diat.py	/^bar_width = 0.25  $/;"	v
+bounds	linear_programing/calory_diet.py	/^bounds = [(0,None)]*len(food_dict)$/;"	v
+bounds	linear_programing/test.py	/^    bounds = [(0, x \/ 100.0)] * len(food_dict)  # Divide by 100 because quantities are in 100g /;"	v
+bounds	linear_programing/whole_number_diat.py	/^bounds = Bounds([0]*len(food_dict), [np.inf]*len(food_dict))$/;"	v
+bounds	numerica_minimisation/comparison_algorithm.py	/^    bounds = [(0, 2 * np.pi)] * (2 * (N - 1))$/;"	v
+bounds	numerica_minimisation/test.py	/^            bounds = [(0, 1)] * (2 * num_variable)$/;"	v
+charge_products	numerica_minimisation/comparison_algorithm.py	/^    charge_products = np.outer(e, e)$/;"	v
+charge_products	numerica_minimisation/dipol_quadropol.py	/^    charge_products = np.outer(e, e)$/;"	v
+charge_products	numerica_minimisation/drawing_potencial.py	/^charge_products = np.outer(e, e)$/;"	v
+charge_products	numerica_minimisation/energy_distance.py	/^    charge_products = np.outer(e, e)$/;"	v
+charge_products	numerica_minimisation/energy_over_n.py	/^    charge_products = np.outer(e, e)$/;"	v
+charge_products	numerica_minimisation/thomson_circle.py	/^    charge_products = np.outer(e, e)$/;"	v
+charge_products	numerica_minimisation/thomson_circle_energy.py	/^        charge_products = np.outer(e, e)$/;"	v
+charge_products	numerica_minimisation/thomson_circle_energy_a_b.py	/^            charge_products = np.outer(e, e)$/;"	v
+charge_products	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^        charge_products = np.outer(e, e)$/;"	v
+charge_products	numerica_minimisation/thomson_problem.py	/^    charge_products = np.outer(e, e)$/;"	v
 cm	crazy-driver/plots/normal_mode.py	/^import matplotlib.cm as cm$/;"	I	nameref:module:matplotlib.cm
 cm	crazy-driver/plots/normal_mode_a.py	/^import matplotlib.cm as cm$/;"	I	nameref:module:matplotlib.cm
 cm	crazy-driver/plots/normal_mode_a_int.py	/^import matplotlib.cm as cm$/;"	I	nameref:module:matplotlib.cm
 cm	crazy-driver/plots/normal_mode_s.py	/^import matplotlib.cm as cm$/;"	I	nameref:module:matplotlib.cm
 cm	crazy-driver/plots/radar.py	/^import matplotlib.cm as cm$/;"	I	nameref:module:matplotlib.cm
+cmap	crazy-driver/code/task1.py	/^cmap = plt.get_cmap('viridis')$/;"	v
+cmap	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^cmap = get_cmap('viridis')  # You can change 'viridis' to other colormaps like 'plasma', 'infern/;"	v
+color	crazy-driver/code/task1.py	/^    color = cmap(i \/ len(s_values))$/;"	v
 colors	crazy-driver/plots/normal_mode.py	/^colors = cm.viridis(np.linspace(0, 1, len(v_0)))$/;"	v
 colors	crazy-driver/plots/normal_mode_a.py	/^colors = cm.viridis(np.linspace(0, 1, len(v_0)))$/;"	v
 colors	crazy-driver/plots/normal_mode_a_int.py	/^colors = cm.viridis(np.linspace(0, 1, len(v_0)))$/;"	v
 colors	crazy-driver/plots/normal_mode_s.py	/^colors = cm.viridis(np.linspace(0, 1, len(v_0)))$/;"	v
 colors	crazy-driver/plots/radar.py	/^colors = cm.viridis(np.linspace(0, 1, len(v_0)))$/;"	v
-columns_to_include	linear_programing/whole_number_diat.py	/^columns_to_include = ['energija[kcal]','energija[kcal]','mascobe[g]', 'ogljikovi_hidrati[g]','pr/;"	v
-food_dict	linear_programing/calory_diet.py	/^    food_dict = {item[0]: list(map(float,item[1:])) for item in lines}$/;"	v
+colors	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^colors = cmap(np.linspace(0, 1, num_colors))$/;"	v
+constraint	linear_programing/calory_diet.py	/^    def constraint(arr):$/;"	f	function:linear_program	file:
+constraint	linear_programing/test.py	/^    def constraint(arr):$/;"	f	function:linear_program	file:
+constraint	linear_programing/whole_number_diat.py	/^    def constraint(arr):$/;"	f	function:linear_program	file:
+derivative_squared	crazy-driver/code/task1.py	/^    derivative_squared = [(v_0 \/ t_0) * d**2 for d in dy_dx]$/;"	v
+diff	numerica_minimisation/energy_distance.py	/^    diff = positions[:, np.newaxis, :] - positions[np.newaxis, :, :]$/;"	v
+dipol	numerica_minimisation/dipol_quadropol.py	/^    dipol = np.linalg.norm(np.sum(positions,axis=0)) $/;"	v
+dipol_ar	numerica_minimisation/dipol_quadropol.py	/^dipol_ar = []$/;"	v
+distances	numerica_minimisation/energy_distance.py	/^    distances = np.linalg.norm(diff, axis=-1)$/;"	v
+distances_average	numerica_minimisation/energy_distance.py	/^    distances_average = np.average(distances[i_upper].flatten())$/;"	v
+distances_average_ar	numerica_minimisation/energy_distance.py	/^distances_average_ar = []$/;"	v
+distances_max	numerica_minimisation/energy_distance.py	/^    distances_max = np.max(distances[i_upper].flatten())$/;"	v
+distances_max_ar	numerica_minimisation/energy_distance.py	/^distances_max_ar = []$/;"	v
+distances_min	numerica_minimisation/energy_distance.py	/^    distances_min = np.min(distances[i_upper].flatten())$/;"	v
+distances_min_ar	numerica_minimisation/energy_distance.py	/^distances_min_ar = []$/;"	v
+distances_sigma	numerica_minimisation/energy_distance.py	/^    distances_sigma = np.std(distances[i_upper].flatten())$/;"	v
+distances_sigma_ar	numerica_minimisation/energy_distance.py	/^distances_sigma_ar = []$/;"	v
+dual1	linear_programing/test.py	/^        x1, fun1, slack1, A1, b1, dual1 = solution1$/;"	v
+dual2	linear_programing/test.py	/^        x2, fun2, slack2, A2, b2, dual2 = solution2$/;"	v
+dual3	linear_programing/test.py	/^        x3, fun3, slack3, A3, b3, dual3 = solution3$/;"	v
+dual_1	linear_programing/calory_diet.py	/^problem_1, final_1, slack_1, A_1, b_1, dual_1 = linear_program(arr,minimum,bounds)$/;"	v
+dual_2	linear_programing/calory_diet.py	/^problem_2, final_2, slack_2,A_2,b_2,dual_2 = linear_program(arr_2,minimum,bounds)$/;"	v
+dual_3	linear_programing/calory_diet.py	/^problem_3, final_3, slack_3, A_3, b_3,dual_3 = linear_program(arr_3,minimum,bounds)$/;"	v
+dy_dx	crazy-driver/code/task1.py	/^    dy_dx = [derivative(lambda x_val: normal(x_val, s) if s > 1\/3 else overshot(x_val, s), xi, /;"	v
+e	numerica_minimisation/comparison_algorithm.py	/^    e = [1] * N$/;"	v
+e	numerica_minimisation/dipol_quadropol.py	/^    e = [1] * N  # Charges of the electrons$/;"	v
+e	numerica_minimisation/drawing_potencial.py	/^e = [1] * (N+2)$/;"	v
+e	numerica_minimisation/energy_distance.py	/^    e = [1] * N  # Charges of the electrons$/;"	v
+e	numerica_minimisation/energy_over_n.py	/^    e = [1] * N  # Charges of the electrons$/;"	v
+e	numerica_minimisation/thomson_circle.py	/^    e = [1] * N  # Charges of the electrons$/;"	v
+e	numerica_minimisation/thomson_circle_energy.py	/^        e = [1] * N  # Charges of the electrons$/;"	v
+e	numerica_minimisation/thomson_circle_energy_a_b.py	/^            e = [1] * N  # Charges of the electrons$/;"	v
+e	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^        e = [1] * N  # Charges of the electrons$/;"	v
+e	numerica_minimisation/thomson_problem.py	/^    e = [1] * N  # Charges of the electrons$/;"	v
+elapsed_time	numerica_minimisation/test.py	/^        elapsed_time = time.time() - start_time$/;"	v
+electron_colors	numerica_minimisation/thomson_circle.py	/^    electron_colors = plt.cm.plasma(np.linspace(0, 1, N))$/;"	v
+electron_colors	numerica_minimisation/thomson_problem.py	/^    electron_colors = cm.plasma(np.linspace(0, 1, N))$/;"	v
+ellipse_area	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^def ellipse_area(a, b):$/;"	f
+end_time	numerica_minimisation/comparison_algorithm.py	/^        end_time = time.time()$/;"	v
+end_time	numerica_minimisation/comparison_algorithm.py	/^    end_time = time.time()$/;"	v
+energy	numerica_minimisation/drawing_potencial.py	/^energy = np.apply_along_axis(E, 1, phi).reshape(phi_1.shape)$/;"	v
+energy_data	numerica_minimisation/thomson_circle_energy.py	/^energy_data = {n: [] for n in n_values}$/;"	v
+energy_data	numerica_minimisation/thomson_circle_energy_a_b.py	/^energy_data = {(n, a, b): [] for n in n_values for a, b in zip(a_values, b_values)}$/;"	v
+energy_data	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^energy_data = {ratio: [] for ratio in aspect_ratios}$/;"	v
+error	numerica_minimisation/test.py	/^            error = np.abs((result.fun - known_energies[N]) \/ known_energies[N]) * 100$/;"	v
+errors	numerica_minimisation/test.py	/^errors = {method: [] for method in methods}$/;"	v
+errs	numerica_minimisation/test.py	/^        Ns, errs = zip(*errors[method])$/;"	v
+fig	linear_programing/calory_diet.py	/^fig, ax = plt.subplots(figsize=(16,9))$/;"	v
+fig	linear_programing/test.py	/^fig, axs = plt.subplots(1, 2, figsize=(16, 6))$/;"	v
+fig	linear_programing/whole_number_diat.py	/^fig, ax = plt.subplots(figsize=(16,9))$/;"	v
+fig	numerica_minimisation/dipol_quadropol.py	/^fig, ax1 = plt.subplots(figsize=(12, 8))$/;"	v
+fig	numerica_minimisation/drawing_potencial.py	/^fig = plt.figure()$/;"	v
+fig	numerica_minimisation/energy_distance.py	/^fig, ax = plt.subplots(1,2,figsize=(16,9))$/;"	v
+fig	numerica_minimisation/energy_over_n.py	/^fig, ax = plt.subplots(figsize=(16,9))$/;"	v
+fig	numerica_minimisation/thomson_circle.py	/^fig = plt.figure(figsize=(18, 12))$/;"	v
+fig	numerica_minimisation/thomson_problem.py	/^fig = plt.figure(figsize=(18, 12))$/;"	v
+fig1	linear_programing/calory_diet.py	/^fig1, ax1 = plt.subplots(figsize=(16,9))$/;"	v
+filename	linear_programing/calory_diet.py	/^filename = "latex_tables_all_problems.txt"$/;"	v
+final_1	linear_programing/calory_diet.py	/^problem_1, final_1, slack_1, A_1, b_1, dual_1 = linear_program(arr,minimum,bounds)$/;"	v
+final_1	linear_programing/whole_number_diat.py	/^problem_1, final_1 = linear_program(arr,minimum,bounds)$/;"	v
+final_2	linear_programing/calory_diet.py	/^problem_2, final_2, slack_2,A_2,b_2,dual_2 = linear_program(arr_2,minimum,bounds)$/;"	v
+final_2	linear_programing/whole_number_diat.py	/^problem_2, final_2 = linear_program(arr_2,minimum,bounds)$/;"	v
+final_3	linear_programing/calory_diet.py	/^problem_3, final_3, slack_3, A_3, b_3,dual_3 = linear_program(arr_3,minimum,bounds)$/;"	v
+final_3	linear_programing/whole_number_diat.py	/^problem_3, final_3 = linear_program(arr_3,minimum,bounds)$/;"	v
+fixed_position	numerica_minimisation/dipol_quadropol.py	/^    fixed_position = np.array([[0, 0, 1]])$/;"	v
+fixed_position	numerica_minimisation/energy_distance.py	/^    fixed_position = np.array([[0, 0, 1]])$/;"	v
+fixed_position	numerica_minimisation/thomson_problem.py	/^    fixed_position = np.array([[0, 0, 1]])$/;"	v
+food_dict	linear_programing/calory_diet.py	/^food_dict = pd.read_csv('zivila_2.csv')$/;"	v
+food_dict	linear_programing/test.py	/^food_dict = pd.read_csv('zivila_2.csv')$/;"	v
 food_dict	linear_programing/whole_number_diat.py	/^food_dict = pd.read_csv('grocery_data.csv')$/;"	v
-foods	linear_programing/calory_diet.py	/^foods, quantities = zip(*non_zero_items)$/;"	v
-integrality	linear_programing/whole_number_diat.py	/^integrality = np.ones(len(c), dtype=bool)  # All variables should be integers$/;"	v
+fun1	linear_programing/test.py	/^        x1, fun1, slack1, A1, b1, dual1 = solution1$/;"	v
+fun2	linear_programing/test.py	/^        x2, fun2, slack2, A2, b2, dual2 = solution2$/;"	v
+fun3	linear_programing/test.py	/^        x3, fun3, slack3, A3, b3, dual3 = solution3$/;"	v
+generate_latex_table	linear_programing/calory_diet.py	/^def generate_latex_table(arr, dual_vars, problem_number):$/;"	f
+hull	numerica_minimisation/thomson_problem.py	/^        hull = ConvexHull(positions)$/;"	v
+hull	numerica_minimisation/thomson_problem.py	/^        hull = None$/;"	v
+i_upper	numerica_minimisation/energy_distance.py	/^    i_upper = np.triu_indices_from(distances, k=1)$/;"	v
+index	linear_programing/calory_diet.py	/^index = np.logical_or(index, problem_3 > 0.0)$/;"	v
+index	linear_programing/calory_diet.py	/^index = np.logical_or(problem_1 > 0.0, problem_2 > 0.0)$/;"	v
+index	linear_programing/whole_number_diat.py	/^index = np.logical_or(index, problem_3 > 0.0)$/;"	v
+index	linear_programing/whole_number_diat.py	/^index = np.logical_or(problem_1 > 0.0, problem_2 > 0.0)$/;"	v
+indices	linear_programing/calory_diet.py	/^indices = np.arange(num_entries)$/;"	v
+indices	linear_programing/whole_number_diat.py	/^indices = np.arange(num_entries)$/;"	v
+integral_cumulative	crazy-driver/code/task1.py	/^    integral_cumulative = cumtrapz(y * s, x, initial=0)$/;"	v
+integral_squared_cumulative	crazy-driver/code/task1.py	/^    integral_squared_cumulative = cumtrapz(derivative_squared, x, initial=0)$/;"	v
+integrality	linear_programing/whole_number_diat.py	/^integrality = np.ones(len(food_dict), dtype=int)$/;"	v
+integrand	numerica_minimisation/thomson_circle.py	/^    def integrand(x):$/;"	f	function:superellipse_area	file:
+integrand	numerica_minimisation/thomson_circle_energy.py	/^    def integrand(x):$/;"	f	function:superellipse_area	file:
+integrand	numerica_minimisation/thomson_circle_energy_a_b.py	/^    def integrand(x):$/;"	f	function:superellipse_area	file:
+known_energies	numerica_minimisation/test.py	/^known_energies = {$/;"	v
+known_solutions	numerica_minimisation/comparison_algorithm.py	/^known_solutions = {$/;"	v
 l	crazy-driver/plots/normal_mode.py	/^l = 200$/;"	v
 l	crazy-driver/plots/normal_mode_a.py	/^l = 200$/;"	v
 l	crazy-driver/plots/normal_mode_a_int.py	/^l = 200$/;"	v
 l	crazy-driver/plots/normal_mode_s.py	/^l = 200$/;"	v
 l	crazy-driver/plots/radar.py	/^l = 200$/;"	v
-linear_constraint	linear_programing/whole_number_diat.py	/^linear_constraint = LinearConstraint(-A, -np.inf, -b)$/;"	v
-lines	linear_programing/calory_diet.py	/^    lines = [line.replace('\\t\\t','\\t').strip().split('\\t') for line in file if not line.star/;"	v
+label	crazy-driver/code/task1.py	/^        label = f'Normal (s={s:.2f})'$/;"	v
+label	crazy-driver/code/task1.py	/^        label = f'Overshot (s={s:.2f})'$/;"	v
+latex_table_1	linear_programing/calory_diet.py	/^latex_table_1 = generate_latex_table(arr, dual_1, 1)$/;"	v
+latex_table_2	linear_programing/calory_diet.py	/^latex_table_2 = generate_latex_table(arr_2, dual_2, 2)$/;"	v
+latex_table_3	linear_programing/calory_diet.py	/^latex_table_3 = generate_latex_table(arr_3, dual_3, 3)$/;"	v
+linear_program	linear_programing/calory_diet.py	/^def linear_program(arr,minimum,bounds):$/;"	f
+linear_program	linear_programing/test.py	/^def linear_program(arr, minimum, bounds):$/;"	f
+linear_program	linear_programing/whole_number_diat.py	/^def linear_program(arr,minimum,bounds):$/;"	f
+mappable	numerica_minimisation/drawing_potencial.py	/^mappable = plt.cm.ScalarMappable(cmap='coolwarm')$/;"	v
+masa	linear_programing/calory_diet.py	/^masa = 70$/;"	v
+masa	linear_programing/test.py	/^masa = 70 $/;"	v
+masa	linear_programing/whole_number_diat.py	/^masa = 70$/;"	v
+max_Histidine_g	linear_programing/calory_diet.py	/^max_Histidine_g = [None,'Histidine_g']$/;"	v
+max_Histidine_g	linear_programing/test.py	/^max_Histidine_g = [None, 'Histidine_g']$/;"	v
+max_Histidine_g	linear_programing/whole_number_diat.py	/^max_Histidine_g = [None,'Histidine_g']$/;"	v
+max_Isoleucine_g	linear_programing/calory_diet.py	/^max_Isoleucine_g = [None,'Isoleucine_g']$/;"	v
+max_Isoleucine_g	linear_programing/test.py	/^max_Isoleucine_g = [None, 'Isoleucine_g']$/;"	v
+max_Isoleucine_g	linear_programing/whole_number_diat.py	/^max_Isoleucine_g = [None,'Isoleucine_g']$/;"	v
+max_Leucine_g	linear_programing/calory_diet.py	/^max_Leucine_g = [None,'Leucine_g']$/;"	v
+max_Leucine_g	linear_programing/test.py	/^max_Leucine_g = [None, 'Leucine_g']$/;"	v
+max_Leucine_g	linear_programing/whole_number_diat.py	/^max_Leucine_g = [None,'Leucine_g']$/;"	v
+max_Lysine_g	linear_programing/calory_diet.py	/^max_Lysine_g = [None,'Lysine_g']$/;"	v
+max_Lysine_g	linear_programing/test.py	/^max_Lysine_g = [None, 'Lysine_g']$/;"	v
+max_Lysine_g	linear_programing/whole_number_diat.py	/^max_Lysine_g = [None,'Lysine_g']$/;"	v
+max_Methionine_g	linear_programing/calory_diet.py	/^max_Methionine_g = [None,'Methionine_g']$/;"	v
+max_Methionine_g	linear_programing/test.py	/^max_Methionine_g = [None, 'Methionine_g']$/;"	v
+max_Methionine_g	linear_programing/whole_number_diat.py	/^max_Methionine_g = [None,'Methionine_g']$/;"	v
+max_Phenylalanine_g	linear_programing/calory_diet.py	/^max_Phenylalanine_g = [None,'Phenylalanine_g']$/;"	v
+max_Phenylalanine_g	linear_programing/test.py	/^max_Phenylalanine_g = [None, 'Phenylalanine_g']$/;"	v
+max_Phenylalanine_g	linear_programing/whole_number_diat.py	/^max_Phenylalanine_g = [None,'Phenylalanine_g']$/;"	v
+max_Teza_g	linear_programing/calory_diet.py	/^max_Teza_g = [2000.,'Teza_g']$/;"	v
+max_Teza_g	linear_programing/test.py	/^max_Teza_g = [2000.0, 'Teza_g']$/;"	v
+max_Teza_g	linear_programing/whole_number_diat.py	/^max_Teza_g = [2000,'quantity_g']$/;"	v
+max_Threonine_g	linear_programing/calory_diet.py	/^max_Threonine_g = [None,'Threonine_g']$/;"	v
+max_Threonine_g	linear_programing/test.py	/^max_Threonine_g = [None, 'Threonine_g']$/;"	v
+max_Threonine_g	linear_programing/whole_number_diat.py	/^max_Threonine_g = [None,'Threonine_g']$/;"	v
+max_Tryptophan_g	linear_programing/calory_diet.py	/^max_Tryptophan_g = [None,'Tryptophan_g']$/;"	v
+max_Tryptophan_g	linear_programing/test.py	/^max_Tryptophan_g = [None, 'Tryptophan_g']$/;"	v
+max_Tryptophan_g	linear_programing/whole_number_diat.py	/^max_Tryptophan_g = [None,'Tryptophan_g']$/;"	v
+max_c	linear_programing/calory_diet.py	/^max_c = [None,'Vitamin_C_mg']$/;"	v
+max_c	linear_programing/test.py	/^max_c = [None, 'Vitamin_C_mg']$/;"	v
+max_c	linear_programing/whole_number_diat.py	/^max_c = [None,'Vitamin_C_mg']$/;"	v
+max_ca	linear_programing/calory_diet.py	/^max_ca = [None,'Ca_mg']$/;"	v
+max_ca	linear_programing/test.py	/^max_ca = [None, 'Ca_mg']$/;"	v
+max_ca	linear_programing/whole_number_diat.py	/^max_ca = [None,'Ca_mg']$/;"	v
+max_cena	linear_programing/calory_diet.py	/^max_cena = [None,'Cena_EUR']$/;"	v
+max_cena	linear_programing/test.py	/^max_cena = [None, 'Cena_EUR']$/;"	v
+max_cena	linear_programing/whole_number_diat.py	/^max_cena = [25,'Cena_EUR']$/;"	v
+max_energija	linear_programing/calory_diet.py	/^max_energija = [None,'energija_kcal']$/;"	v
+max_energija	linear_programing/test.py	/^max_energija = [None, 'energija_kcal']$/;"	v
+max_energija	linear_programing/whole_number_diat.py	/^max_energija = [None,'energija_kcal']$/;"	v
+max_fe	linear_programing/calory_diet.py	/^max_fe = [None,'Fe_mg']$/;"	v
+max_fe	linear_programing/test.py	/^max_fe = [None, 'Fe_mg']$/;"	v
+max_fe	linear_programing/whole_number_diat.py	/^max_fe = [None,'Fe_mg']$/;"	v
+max_k	linear_programing/calory_diet.py	/^max_k = [None,'Kalij_mg']$/;"	v
+max_k	linear_programing/test.py	/^max_k = [None, 'Kalij_mg']$/;"	v
+max_k	linear_programing/whole_number_diat.py	/^max_k = [None,'Kalij_mg']$/;"	v
+max_mascobe	linear_programing/calory_diet.py	/^max_mascobe = [None,'mascobe_g']$/;"	v
+max_mascobe	linear_programing/test.py	/^max_mascobe = [None, 'mascobe_g']$/;"	v
+max_mascobe	linear_programing/whole_number_diat.py	/^max_mascobe = [None,'mascobe_g']$/;"	v
+max_na	linear_programing/calory_diet.py	/^max_na = [None,'Natrij_mg']$/;"	v
+max_na	linear_programing/test.py	/^max_na = [None, 'Natrij_mg']$/;"	v
+max_na	linear_programing/whole_number_diat.py	/^max_na = [None,'Natrij_mg']$/;"	v
+max_oghidrati	linear_programing/calory_diet.py	/^max_oghidrati = [None,'ogljikovi_hidrati_g']$/;"	v
+max_oghidrati	linear_programing/test.py	/^max_oghidrati = [None, 'ogljikovi_hidrati_g']$/;"	v
+max_oghidrati	linear_programing/whole_number_diat.py	/^max_oghidrati = [None,'ogljikovi_hidrati_g']$/;"	v
+max_proteini	linear_programing/calory_diet.py	/^max_proteini = [None,'proteini_g']$/;"	v
+max_proteini	linear_programing/test.py	/^max_proteini = [None, 'proteini_g']$/;"	v
+max_proteini	linear_programing/whole_number_diat.py	/^max_proteini = [None,'proteini_g']$/;"	v
+max_satfat	linear_programing/calory_diet.py	/^max_satfat = [15.,'nasicene_mascobe_g']$/;"	v
+max_satfat	linear_programing/calory_diet.py	/^max_satfat = [None,'nasicene_mascobe_g']$/;"	v
+max_satfat	linear_programing/test.py	/^max_satfat = [15.0, 'nasicene_mascobe_g']$/;"	v
+max_satfat	linear_programing/test.py	/^max_satfat = [None, 'nasicene_mascobe_g']$/;"	v
+max_satfat	linear_programing/whole_number_diat.py	/^max_satfat = [100,'nasicene_mascobe_g']$/;"	v
+max_satfat	linear_programing/whole_number_diat.py	/^max_satfat = [None,'nasicene_mascobe_g']$/;"	v
+max_sladkor	linear_programing/calory_diet.py	/^max_sladkor = [25.,'sladkor_g']$/;"	v
+max_sladkor	linear_programing/calory_diet.py	/^max_sladkor = [None,'sladkor_g']$/;"	v
+max_sladkor	linear_programing/test.py	/^max_sladkor = [25.0, 'sladkor_g']$/;"	v
+max_sladkor	linear_programing/test.py	/^max_sladkor = [None, 'sladkor_g']$/;"	v
+max_sladkor	linear_programing/whole_number_diat.py	/^max_sladkor = [30,'sladkor_g']$/;"	v
+max_sladkor	linear_programing/whole_number_diat.py	/^max_sladkor = [None,'sladkor_g']$/;"	v
+max_vlaknine	linear_programing/calory_diet.py	/^max_vlaknine = [80.,'vlaknine_g']$/;"	v
+max_vlaknine	linear_programing/calory_diet.py	/^max_vlaknine = [None,'vlaknine_g']$/;"	v
+max_vlaknine	linear_programing/test.py	/^max_vlaknine = [None, 'vlaknine_g']$/;"	v
+max_vlaknine	linear_programing/whole_number_diat.py	/^max_vlaknine = [None,'vlaknine_g']$/;"	v
+methods	numerica_minimisation/comparison_algorithm.py	/^methods = ['CG', 'BFGS', 'Nelder-Mead', 'Powell', 'L-BFGS-B', 'Simulated Annealing']$/;"	v
+methods	numerica_minimisation/test.py	/^methods = ['Nelder-Mead', 'BFGS', 'CG', 'Powell', 'TNC', 'Differential Evolution']$/;"	v
+min_Histidine_g	linear_programing/calory_diet.py	/^min_Histidine_g = [None,'Histidine_g']$/;"	v
+min_Histidine_g	linear_programing/calory_diet.py	/^min_Histidine_g = [masa*0.01,'Histidine_g']$/;"	v
+min_Histidine_g	linear_programing/test.py	/^min_Histidine_g = [None, 'Histidine_g']$/;"	v
+min_Histidine_g	linear_programing/test.py	/^min_Histidine_g = [masa * 0.01, 'Histidine_g']$/;"	v
+min_Histidine_g	linear_programing/whole_number_diat.py	/^min_Histidine_g = [None,'Histidine_g']$/;"	v
+min_Histidine_g	linear_programing/whole_number_diat.py	/^min_Histidine_g = [masa*0.01,'Histidine_g']$/;"	v
+min_Isoleucine_g	linear_programing/calory_diet.py	/^min_Isoleucine_g = [None,'Isoleucine_g']$/;"	v
+min_Isoleucine_g	linear_programing/calory_diet.py	/^min_Isoleucine_g = [masa*0.02,'Isoleucine_g']$/;"	v
+min_Isoleucine_g	linear_programing/test.py	/^min_Isoleucine_g = [None, 'Isoleucine_g']$/;"	v
+min_Isoleucine_g	linear_programing/test.py	/^min_Isoleucine_g = [masa * 0.02, 'Isoleucine_g']$/;"	v
+min_Isoleucine_g	linear_programing/whole_number_diat.py	/^min_Isoleucine_g = [None,'Isoleucine_g']$/;"	v
+min_Isoleucine_g	linear_programing/whole_number_diat.py	/^min_Isoleucine_g = [masa*0.02,'Isoleucine_g']$/;"	v
+min_Leucine_g	linear_programing/calory_diet.py	/^min_Leucine_g = [0.039*masa,'Leucine_g']$/;"	v
+min_Leucine_g	linear_programing/calory_diet.py	/^min_Leucine_g = [None,'Leucine_g']$/;"	v
+min_Leucine_g	linear_programing/test.py	/^min_Leucine_g = [0.039 * masa, 'Leucine_g']$/;"	v
+min_Leucine_g	linear_programing/test.py	/^min_Leucine_g = [None, 'Leucine_g']$/;"	v
+min_Leucine_g	linear_programing/whole_number_diat.py	/^min_Leucine_g = [0.039*masa,'Leucine_g']$/;"	v
+min_Leucine_g	linear_programing/whole_number_diat.py	/^min_Leucine_g = [None,'Leucine_g']$/;"	v
+min_Lysine_g	linear_programing/calory_diet.py	/^min_Lysine_g = [0.03*masa,'Lysine_g']$/;"	v
+min_Lysine_g	linear_programing/calory_diet.py	/^min_Lysine_g = [None,'Lysine_g']$/;"	v
+min_Lysine_g	linear_programing/test.py	/^min_Lysine_g = [0.03 * masa, 'Lysine_g']$/;"	v
+min_Lysine_g	linear_programing/test.py	/^min_Lysine_g = [None, 'Lysine_g']$/;"	v
+min_Lysine_g	linear_programing/whole_number_diat.py	/^min_Lysine_g = [0.03*masa,'Lysine_g']$/;"	v
+min_Lysine_g	linear_programing/whole_number_diat.py	/^min_Lysine_g = [None,'Lysine_g']$/;"	v
+min_Methionine_g	linear_programing/calory_diet.py	/^min_Methionine_g = [0.015*masa,'Methionine_g']$/;"	v
+min_Methionine_g	linear_programing/calory_diet.py	/^min_Methionine_g = [None,'Methionine_g']$/;"	v
+min_Methionine_g	linear_programing/test.py	/^min_Methionine_g = [0.015 * masa, 'Methionine_g']$/;"	v
+min_Methionine_g	linear_programing/test.py	/^min_Methionine_g = [None, 'Methionine_g']$/;"	v
+min_Methionine_g	linear_programing/whole_number_diat.py	/^min_Methionine_g = [0.015*masa,'Methionine_g']$/;"	v
+min_Methionine_g	linear_programing/whole_number_diat.py	/^min_Methionine_g = [None,'Methionine_g']$/;"	v
+min_Phenylalanine_g	linear_programing/calory_diet.py	/^min_Phenylalanine_g = [0.025*masa,'Phenylalanine_g']$/;"	v
+min_Phenylalanine_g	linear_programing/calory_diet.py	/^min_Phenylalanine_g = [None,'Phenylalanine_g']$/;"	v
+min_Phenylalanine_g	linear_programing/test.py	/^min_Phenylalanine_g = [0.025 * masa, 'Phenylalanine_g']$/;"	v
+min_Phenylalanine_g	linear_programing/test.py	/^min_Phenylalanine_g = [None, 'Phenylalanine_g']$/;"	v
+min_Phenylalanine_g	linear_programing/whole_number_diat.py	/^min_Phenylalanine_g = [0.025*masa,'Phenylalanine_g']$/;"	v
+min_Phenylalanine_g	linear_programing/whole_number_diat.py	/^min_Phenylalanine_g = [None,'Phenylalanine_g']$/;"	v
+min_Teza_g	linear_programing/calory_diet.py	/^min_Teza_g = [None,'Teza_g']$/;"	v
+min_Teza_g	linear_programing/test.py	/^min_Teza_g = [None, 'Teza_g']$/;"	v
+min_Teza_g	linear_programing/whole_number_diat.py	/^min_Teza_g = [None,'quantity_g']$/;"	v
+min_Threonine_g	linear_programing/calory_diet.py	/^min_Threonine_g = [None,'Threonine_g']$/;"	v
+min_Threonine_g	linear_programing/test.py	/^min_Threonine_g = [None, 'Threonine_g']$/;"	v
+min_Threonine_g	linear_programing/whole_number_diat.py	/^min_Threonine_g = [None,'Threonine_g']$/;"	v
+min_Tryptophan_g	linear_programing/calory_diet.py	/^min_Tryptophan_g = [0.004*masa,'Tryptophan_g']$/;"	v
+min_Tryptophan_g	linear_programing/calory_diet.py	/^min_Tryptophan_g = [None,'Tryptophan_g']$/;"	v
+min_Tryptophan_g	linear_programing/test.py	/^min_Tryptophan_g = [0.004 * masa, 'Tryptophan_g']$/;"	v
+min_Tryptophan_g	linear_programing/test.py	/^min_Tryptophan_g = [None, 'Tryptophan_g']$/;"	v
+min_Tryptophan_g	linear_programing/whole_number_diat.py	/^min_Tryptophan_g = [0.004*masa,'Tryptophan_g']$/;"	v
+min_Tryptophan_g	linear_programing/whole_number_diat.py	/^min_Tryptophan_g = [None,'Tryptophan_g']$/;"	v
+min_c	linear_programing/calory_diet.py	/^min_c = [None,'Vitamin_C_mg']$/;"	v
+min_c	linear_programing/test.py	/^min_c = [None, 'Vitamin_C_mg']$/;"	v
+min_c	linear_programing/whole_number_diat.py	/^min_c = [None,'Vitamin_C_mg']$/;"	v
+min_ca	linear_programing/calory_diet.py	/^min_ca = [1000.,'Ca_mg']$/;"	v
+min_ca	linear_programing/test.py	/^min_ca = [1000.0, 'Ca_mg']$/;"	v
+min_ca	linear_programing/whole_number_diat.py	/^min_ca = [1000.,'Ca_mg']$/;"	v
+min_cena	linear_programing/calory_diet.py	/^min_cena = [None,'Cena_EUR']$/;"	v
+min_cena	linear_programing/test.py	/^min_cena = [None, 'Cena_EUR']$/;"	v
+min_cena	linear_programing/whole_number_diat.py	/^min_cena = [None,'Cena_EUR']$/;"	v
+min_energija	linear_programing/calory_diet.py	/^min_energija = [2000,'energija_kcal']$/;"	v
+min_energija	linear_programing/test.py	/^min_energija = [None, 'energija_kcal']$/;"	v
+min_energija	linear_programing/whole_number_diat.py	/^min_energija = [2000,'energija_kcal']$/;"	v
+min_fe	linear_programing/calory_diet.py	/^min_fe = [18.,'Fe_mg']$/;"	v
+min_fe	linear_programing/test.py	/^min_fe = [18.0, 'Fe_mg']$/;"	v
+min_fe	linear_programing/whole_number_diat.py	/^min_fe = [18.,'Fe_mg']$/;"	v
+min_k	linear_programing/calory_diet.py	/^min_k = [None,'Kalij_mg']$/;"	v
+min_k	linear_programing/test.py	/^min_k = [None, 'Kalij_mg']$/;"	v
+min_k	linear_programing/whole_number_diat.py	/^min_k = [None,'Kalij_mg']$/;"	v
+min_mascobe	linear_programing/calory_diet.py	/^min_mascobe = [70,'mascobe_g']$/;"	v
+min_mascobe	linear_programing/test.py	/^min_mascobe = [70, 'mascobe_g']$/;"	v
+min_mascobe	linear_programing/whole_number_diat.py	/^min_mascobe = [70,'mascobe_g']$/;"	v
+min_na	linear_programing/calory_diet.py	/^min_na = [None,'Natrij_mg']$/;"	v
+min_na	linear_programing/test.py	/^min_na = [None, 'Natrij_mg']$/;"	v
+min_na	linear_programing/whole_number_diat.py	/^min_na = [None,'Natrij_mg']$/;"	v
+min_oghidrati	linear_programing/calory_diet.py	/^min_oghidrati = [310.,'ogljikovi_hidrati_g']$/;"	v
+min_oghidrati	linear_programing/test.py	/^min_oghidrati = [310.0, 'ogljikovi_hidrati_g']$/;"	v
+min_oghidrati	linear_programing/whole_number_diat.py	/^min_oghidrati = [310.,'ogljikovi_hidrati_g']$/;"	v
+min_proteini	linear_programing/calory_diet.py	/^min_proteini = [50.,'proteini_g']$/;"	v
+min_proteini	linear_programing/test.py	/^min_proteini = [50.0, 'proteini_g']$/;"	v
+min_proteini	linear_programing/whole_number_diat.py	/^min_proteini = [None,'proteini_g']$/;"	v
+min_satfat	linear_programing/calory_diet.py	/^min_satfat = [None,'nasicene_mascobe_g']$/;"	v
+min_satfat	linear_programing/test.py	/^min_satfat = [None, 'nasicene_mascobe_g']$/;"	v
+min_satfat	linear_programing/whole_number_diat.py	/^min_satfat = [None,'nasicene_mascobe_g']$/;"	v
+min_sladkor	linear_programing/calory_diet.py	/^min_sladkor = [None,'sladkor_g']$/;"	v
+min_sladkor	linear_programing/test.py	/^min_sladkor = [None, 'sladkor_g']$/;"	v
+min_sladkor	linear_programing/whole_number_diat.py	/^min_sladkor = [None,'sladkor_g']$/;"	v
+min_vlaknine	linear_programing/calory_diet.py	/^min_vlaknine = [30.,'vlaknine_g']$/;"	v
+min_vlaknine	linear_programing/calory_diet.py	/^min_vlaknine = [None,'vlaknine_g']$/;"	v
+min_vlaknine	linear_programing/test.py	/^min_vlaknine = [30.0, 'vlaknine_g']$/;"	v
+min_vlaknine	linear_programing/test.py	/^min_vlaknine = [None, 'vlaknine_g']$/;"	v
+min_vlaknine	linear_programing/whole_number_diat.py	/^min_vlaknine = [30,'vlaknine_g']$/;"	v
+min_vlaknine	linear_programing/whole_number_diat.py	/^min_vlaknine = [None,'vlaknine_g']$/;"	v
+minimum	linear_programing/calory_diet.py	/^minimum = 'Cena_EUR'$/;"	v
+minimum	linear_programing/test.py	/^minimum = 'energija_kcal'$/;"	v
+minimum	linear_programing/whole_number_diat.py	/^minimum = 'proteini_g'$/;"	v
 modelska_analiza-1	README.md	/^# modelska_analiza-1$/;"	c
-non_zero_items	linear_programing/calory_diet.py	/^non_zero_items = [(food, quantity) for food, quantity in zip(food_dict.keys(), result.x) if quan/;"	v
+n	numerica_minimisation/thomson_circle.py	/^n = 12  # Superellipse parameter$/;"	v
+n	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^n = 2$/;"	v
+n_values	numerica_minimisation/thomson_circle_energy.py	/^n_values = [2, 4, 6, 12]  # You can adjust this list for different superellipse shapes$/;"	v
+n_values	numerica_minimisation/thomson_circle_energy_a_b.py	/^n_values = [2, 4, 6, 12]  # You can adjust this list for different superellipse shapes$/;"	v
+normal	crazy-driver/code/optimal_driving.py	/^def normal(x,s):$/;"	f
+normal	crazy-driver/code/task1.py	/^def normal(x, s):$/;"	f
+np	crazy-driver/code/optimal_driving.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	crazy-driver/code/task1.py	/^import numpy as np$/;"	I	nameref:module:numpy
 np	crazy-driver/plots/normal_mode.py	/^import numpy as np$/;"	I	nameref:module:numpy
 np	crazy-driver/plots/normal_mode_a.py	/^import numpy as np$/;"	I	nameref:module:numpy
 np	crazy-driver/plots/normal_mode_a_int.py	/^import numpy as np$/;"	I	nameref:module:numpy
 np	crazy-driver/plots/normal_mode_s.py	/^import numpy as np$/;"	I	nameref:module:numpy
 np	crazy-driver/plots/radar.py	/^import numpy as np$/;"	I	nameref:module:numpy
 np	linear_programing/calory_diet.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	linear_programing/test.py	/^import numpy as np$/;"	I	nameref:module:numpy
 np	linear_programing/whole_number_diat.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	numerica_minimisation/comparison_algorithm.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	numerica_minimisation/dipol_quadropol.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	numerica_minimisation/drawing_potencial.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	numerica_minimisation/energy_distance.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	numerica_minimisation/energy_over_n.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	numerica_minimisation/test.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	numerica_minimisation/thomson_circle.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	numerica_minimisation/thomson_circle_energy.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	numerica_minimisation/thomson_circle_energy_a_b.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	numerica_minimisation/thomson_problem.py	/^import numpy as np$/;"	I	nameref:module:numpy
+num_colors	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^num_colors = len(energy_data)$/;"	v
+num_entries	linear_programing/calory_diet.py	/^num_entries = len(slack)$/;"	v
+num_entries	linear_programing/calory_diet.py	/^num_entries = np.sum(index)$/;"	v
+num_entries	linear_programing/whole_number_diat.py	/^num_entries = np.sum(index)$/;"	v
+num_foods_diet1	linear_programing/test.py	/^num_foods_diet1 = []$/;"	v
+num_foods_diet2	linear_programing/test.py	/^num_foods_diet2 = []$/;"	v
+num_foods_diet3	linear_programing/test.py	/^num_foods_diet3 = []$/;"	v
+num_included1	linear_programing/test.py	/^        num_included1 = 0$/;"	v
+num_included1	linear_programing/test.py	/^        num_included1 = np.sum(x1 > 0)$/;"	v
+num_included2	linear_programing/test.py	/^        num_included2 = 0$/;"	v
+num_included2	linear_programing/test.py	/^        num_included2 = np.sum(x2 > 0)$/;"	v
+num_included3	linear_programing/test.py	/^        num_included3 = 0$/;"	v
+num_included3	linear_programing/test.py	/^        num_included3 = np.sum(x3 > 0)$/;"	v
+num_variable	numerica_minimisation/test.py	/^    num_variable = N - 2$/;"	v
+overshot	crazy-driver/code/optimal_driving.py	/^def overshot(x,s):$/;"	f
+overshot	crazy-driver/code/task1.py	/^def overshot(x, s):$/;"	f
+pd	linear_programing/calory_diet.py	/^import pandas as pd$/;"	I	nameref:module:pandas
+pd	linear_programing/test.py	/^import pandas as pd$/;"	I	nameref:module:pandas
 pd	linear_programing/whole_number_diat.py	/^import pandas as pd$/;"	I	nameref:module:pandas
+phi	numerica_minimisation/drawing_potencial.py	/^phi = np.vstack([phi_1.ravel(),theta_1.ravel()]).T$/;"	v
+phi	numerica_minimisation/energy_distance.py	/^    phi = result.x$/;"	v
+phi_1	numerica_minimisation/drawing_potencial.py	/^phi_1 = np.linspace(0, 2 * np.pi, 100)  $/;"	v
+phi_1	numerica_minimisation/drawing_potencial.py	/^theta_1, phi_1 = np.meshgrid(theta_1,phi_1)$/;"	v
+phi_angles	numerica_minimisation/dipol_quadropol.py	/^    phi_angles = phi_opt[::2]$/;"	v
+phi_angles	numerica_minimisation/energy_distance.py	/^    phi_angles = phi[::2]$/;"	v
+phi_angles	numerica_minimisation/thomson_problem.py	/^    phi_angles = phi_opt[::2]$/;"	v
+phi_opt	numerica_minimisation/dipol_quadropol.py	/^    phi_opt = result.x$/;"	v
+phi_opt	numerica_minimisation/energy_distance.py	/^    phi_opt = result.fun$/;"	v
+phi_opt	numerica_minimisation/energy_over_n.py	/^    phi_opt = result.fun$/;"	v
+phi_opt	numerica_minimisation/thomson_circle.py	/^    phi_opt = result.x$/;"	v
+phi_opt	numerica_minimisation/thomson_problem.py	/^    phi_opt = result.x$/;"	v
+phi_opt_ar	numerica_minimisation/energy_distance.py	/^phi_opt_ar = []$/;"	v
+plt	crazy-driver/code/optimal_driving.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	crazy-driver/code/task1.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
 plt	crazy-driver/plots/normal_mode.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
 plt	crazy-driver/plots/normal_mode_a.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
 plt	crazy-driver/plots/normal_mode_a_int.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
 plt	crazy-driver/plots/normal_mode_s.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
 plt	crazy-driver/plots/radar.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
 plt	linear_programing/calory_diet.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	linear_programing/test.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
 plt	linear_programing/whole_number_diat.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
-quantities	linear_programing/calory_diet.py	/^foods, quantities = zip(*non_zero_items)$/;"	v
+plt	numerica_minimisation/comparison_algorithm.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	numerica_minimisation/dipol_quadropol.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	numerica_minimisation/drawing_potencial.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	numerica_minimisation/energy_distance.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	numerica_minimisation/energy_over_n.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	numerica_minimisation/test.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	numerica_minimisation/thomson_circle.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	numerica_minimisation/thomson_circle_energy.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	numerica_minimisation/thomson_circle_energy_a_b.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	numerica_minimisation/thomson_problem.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+positions	numerica_minimisation/dipol_quadropol.py	/^    positions = np.stack(($/;"	v
+positions	numerica_minimisation/dipol_quadropol.py	/^    positions = np.vstack([fixed_position, positions])$/;"	v
+positions	numerica_minimisation/energy_distance.py	/^    positions = np.stack(($/;"	v
+positions	numerica_minimisation/energy_distance.py	/^    positions = np.vstack([fixed_position, positions])$/;"	v
+positions	numerica_minimisation/thomson_circle.py	/^    positions = np.stack(($/;"	v
+positions	numerica_minimisation/thomson_problem.py	/^    positions = np.stack(($/;"	v
+positions	numerica_minimisation/thomson_problem.py	/^    positions = np.vstack([fixed_position, positions])$/;"	v
+price_diet1	linear_programing/test.py	/^price_diet1 = []$/;"	v
+price_diet2	linear_programing/test.py	/^price_diet2 = []$/;"	v
+price_diet3	linear_programing/test.py	/^price_diet3 = []$/;"	v
+problem_1	linear_programing/calory_diet.py	/^problem_1, final_1, slack_1, A_1, b_1, dual_1 = linear_program(arr,minimum,bounds)$/;"	v
+problem_1	linear_programing/whole_number_diat.py	/^problem_1, final_1 = linear_program(arr,minimum,bounds)$/;"	v
+problem_2	linear_programing/calory_diet.py	/^problem_2, final_2, slack_2,A_2,b_2,dual_2 = linear_program(arr_2,minimum,bounds)$/;"	v
+problem_2	linear_programing/whole_number_diat.py	/^problem_2, final_2 = linear_program(arr_2,minimum,bounds)$/;"	v
+problem_3	linear_programing/calory_diet.py	/^problem_3, final_3, slack_3, A_3, b_3,dual_3 = linear_program(arr_3,minimum,bounds)$/;"	v
+problem_3	linear_programing/whole_number_diat.py	/^problem_3, final_3 = linear_program(arr_3,minimum,bounds)$/;"	v
+quad_norm	numerica_minimisation/dipol_quadropol.py	/^    quad_norm = np.linalg.norm(Q)$/;"	v
+quad_norm_ar	numerica_minimisation/dipol_quadropol.py	/^quad_norm_ar = []$/;"	v
 regime_change_y	crazy-driver/plots/normal_mode.py	/^regime_change_y = 3 * l \/ t_0$/;"	v
 regime_change_y	crazy-driver/plots/normal_mode_a.py	/^regime_change_y = 3 * l \/ t_0$/;"	v
 regime_change_y	crazy-driver/plots/normal_mode_a_int.py	/^regime_change_y = 3 * l \/ t_0$/;"	v
 regime_change_y	crazy-driver/plots/normal_mode_s.py	/^regime_change_y = 3 * l \/ t_0$/;"	v
 regime_change_y	crazy-driver/plots/radar.py	/^regime_change_y = 3 * l \/ t_0$/;"	v
-result	linear_programing/calory_diet.py	/^result = linprog(c, A_ub= -A, b_ub= -b, bounds=bounds, method='highs')$/;"	v
-result	linear_programing/calory_diet.py	/^result = linprog(c, A_ub= -A, b_ub= -b, bounds=bounds, method='highs',  options={'dual_feasibili/;"	v
-result	linear_programing/whole_number_diat.py	/^result = milp(c=c, integrality=integrality, constraints=[linear_constraint], bounds=bounds)$/;"	v
-rules	linear_programing/whole_number_diat.py	/^rules = [1,-1,1,1,1,1,1,1,1,1,-1,-1,0]$/;"	v
+relative_error	numerica_minimisation/comparison_algorithm.py	/^        relative_error = np.abs(result.fun - known_solutions.get(N, result.fun)) \/ known_soluti/;"	v
+relative_error_sa	numerica_minimisation/comparison_algorithm.py	/^    relative_error_sa = np.abs(result_local.fun - known_solutions.get(N, result_local.fun)) \/ k/;"	v
+relative_errors_per_method	numerica_minimisation/comparison_algorithm.py	/^relative_errors_per_method = {method: [] for method in methods}$/;"	v
+result	numerica_minimisation/comparison_algorithm.py	/^        result = minimize(E, x_0, args=(N, charge_products), method=method)$/;"	v
+result	numerica_minimisation/dipol_quadropol.py	/^    result = minimize(E, x_0, method='CG')$/;"	v
+result	numerica_minimisation/energy_distance.py	/^    result = minimize(E, x_0, method='CG')$/;"	v
+result	numerica_minimisation/energy_over_n.py	/^    result = minimize(E, x_0, method='CG')$/;"	v
+result	numerica_minimisation/test.py	/^            result = differential_evolution(E, bounds, args=(N,), tol=1e-6)$/;"	v
+result	numerica_minimisation/test.py	/^            result = minimize(E, x_0, args=(N,), method=method)$/;"	v
+result	numerica_minimisation/thomson_circle.py	/^    result = dual_annealing(E,bounds=[(0, 2 * np.pi)] * (N))$/;"	v
+result	numerica_minimisation/thomson_circle_energy.py	/^        result = dual_annealing(E, bounds=[(0, 2 * np.pi)] * N)$/;"	v
+result	numerica_minimisation/thomson_circle_energy_a_b.py	/^            result = dual_annealing(E, bounds=[(0, 2 * np.pi)] * N)$/;"	v
+result	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^        result = dual_annealing(E, bounds=[(0, 2 * np.pi)] * N)$/;"	v
+result	numerica_minimisation/thomson_problem.py	/^    result = minimize(E, x_0, method='CG')$/;"	v
+result_local	numerica_minimisation/comparison_algorithm.py	/^    result_local = minimize(E, result_sa.x, args=(N, charge_products), method='L-BFGS-B')$/;"	v
+result_sa	numerica_minimisation/comparison_algorithm.py	/^    result_sa = dual_annealing(E_simulated_annealing, bounds=bounds, args=(N, charge_products))$/;"	v
+results	numerica_minimisation/test.py	/^results = {method: [] for method in methods}$/;"	v
+s_ab	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^    s_ab = np.sqrt(A_target \/ A_ab)  # Scaling factor to ensure constant area$/;"	v
+s_n	numerica_minimisation/thomson_circle.py	/^    s_n = np.sqrt(A_target \/ A_n)$/;"	v
+s_n	numerica_minimisation/thomson_circle_energy.py	/^    s_n = np.sqrt(A_target \/ A_n)  # Scaling factor to ensure constant area$/;"	v
+s_n	numerica_minimisation/thomson_circle_energy_a_b.py	/^        s_n = np.sqrt(A_target \/ A_n)  # Scaling factor to ensure constant area$/;"	v
+s_values	crazy-driver/code/optimal_driving.py	/^s_values = np.linspace(-1\/3, 2, 25) $/;"	v
+s_values	crazy-driver/code/task1.py	/^s_values = np.linspace(-1\/3, 2, 25)$/;"	v
+scp	numerica_minimisation/drawing_potencial.py	/^import scipy as scp$/;"	I	nameref:module:scipy
+set2_palette	linear_programing/calory_diet.py	/^set2_palette = sns.color_palette("Set2")[2:]$/;"	v
+set2_palette	linear_programing/test.py	/^set2_palette = sns.color_palette("Set2")[2:]$/;"	v
+set2_palette	linear_programing/whole_number_diat.py	/^set2_palette = sns.color_palette("Set2")[2:]$/;"	v
+simplex	numerica_minimisation/thomson_problem.py	/^            simplex = np.append(simplex, simplex[0])  # Close the loop$/;"	v
+slack	linear_programing/calory_diet.py	/^slack = A_1 @ problem_1$/;"	v
+slack	linear_programing/calory_diet.py	/^slack = A_2 @ problem_2$/;"	v
+slack	linear_programing/calory_diet.py	/^slack = A_3 @ problem_3$/;"	v
+slack1	linear_programing/test.py	/^        x1, fun1, slack1, A1, b1, dual1 = solution1$/;"	v
+slack2	linear_programing/test.py	/^        x2, fun2, slack2, A2, b2, dual2 = solution2$/;"	v
+slack3	linear_programing/test.py	/^        x3, fun3, slack3, A3, b3, dual3 = solution3$/;"	v
+slack_1	linear_programing/calory_diet.py	/^problem_1, final_1, slack_1, A_1, b_1, dual_1 = linear_program(arr,minimum,bounds)$/;"	v
+slack_2	linear_programing/calory_diet.py	/^problem_2, final_2, slack_2,A_2,b_2,dual_2 = linear_program(arr_2,minimum,bounds)$/;"	v
+slack_3	linear_programing/calory_diet.py	/^problem_3, final_3, slack_3, A_3, b_3,dual_3 = linear_program(arr_3,minimum,bounds)$/;"	v
+sns	linear_programing/calory_diet.py	/^import seaborn as sns$/;"	I	nameref:module:seaborn
+sns	linear_programing/test.py	/^import seaborn as sns$/;"	I	nameref:module:seaborn
+sns	linear_programing/whole_number_diat.py	/^import seaborn as sns$/;"	I	nameref:module:seaborn
+sns	numerica_minimisation/comparison_algorithm.py	/^import seaborn as sns$/;"	I	nameref:module:seaborn
+sns	numerica_minimisation/dipol_quadropol.py	/^import seaborn as sns$/;"	I	nameref:module:seaborn
+solution1	linear_programing/test.py	/^    solution1 = linear_program(arr_diet1, minimum, bounds)$/;"	v
+solution2	linear_programing/test.py	/^    solution2 = linear_program(arr_diet2, minimum, bounds)$/;"	v
+solution3	linear_programing/test.py	/^    solution3 = linear_program(arr_diet3, minimum, bounds)$/;"	v
 speed_normal	crazy-driver/plots/normal_mode.py	/^def speed_normal(t,v_0):$/;"	f
 speed_normal	crazy-driver/plots/normal_mode_a.py	/^def speed_normal(t,v_0):$/;"	f
 speed_normal	crazy-driver/plots/normal_mode_a_int.py	/^def speed_normal(v_0):$/;"	f
@@ -120,15 +591,36 @@ speed_under	crazy-driver/plots/normal_mode.py	/^def speed_under(t,v_0):$/;"	f
 speed_under	crazy-driver/plots/normal_mode_a.py	/^def speed_under(t,v_0):$/;"	f
 speed_under	crazy-driver/plots/normal_mode_a_int.py	/^def speed_under(v_0):$/;"	f
 speed_under	crazy-driver/plots/normal_mode_s.py	/^def speed_under(t,v_0):$/;"	f
+start_time	numerica_minimisation/comparison_algorithm.py	/^        start_time = time.time()$/;"	v
+start_time	numerica_minimisation/comparison_algorithm.py	/^    start_time = time.time()$/;"	v
+start_time	numerica_minimisation/test.py	/^        start_time = time.time()$/;"	v
+superellipse_area	numerica_minimisation/thomson_circle.py	/^def superellipse_area(n):$/;"	f
+superellipse_area	numerica_minimisation/thomson_circle_energy.py	/^def superellipse_area(n):$/;"	f
+superellipse_area	numerica_minimisation/thomson_circle_energy_a_b.py	/^def superellipse_area(n, a, b):$/;"	f
+superellipse_x	numerica_minimisation/thomson_circle.py	/^    superellipse_x = s_n*np.sign(np.cos(theta)) * np.abs(np.cos(theta))**(2\/n)$/;"	v
+superellipse_y	numerica_minimisation/thomson_circle.py	/^    superellipse_y = s_n*np.sign(np.sin(theta)) * np.abs(np.sin(theta))**(2\/n)$/;"	v
+surf	numerica_minimisation/drawing_potencial.py	/^surf = ax.plot_surface($/;"	v
 t	crazy-driver/plots/normal_mode.py	/^t = np.linspace(0, 10, 400)$/;"	v
 t	crazy-driver/plots/normal_mode_a.py	/^t = np.linspace(0, 10, 400)$/;"	v
 t	crazy-driver/plots/normal_mode_s.py	/^t = np.linspace(0, 10, 400)$/;"	v
 t	crazy-driver/plots/radar.py	/^t = np.linspace(0, 10, 400)$/;"	v
+t_0	crazy-driver/code/task1.py	/^t_0 = 1  # Example value for t_0$/;"	v
 t_0	crazy-driver/plots/normal_mode.py	/^t_0 = 10$/;"	v
 t_0	crazy-driver/plots/normal_mode_a.py	/^t_0 = 10$/;"	v
 t_0	crazy-driver/plots/normal_mode_a_int.py	/^t_0 = 10$/;"	v
 t_0	crazy-driver/plots/normal_mode_s.py	/^t_0 = 10$/;"	v
 t_0	crazy-driver/plots/radar.py	/^t_0 = 10$/;"	v
+theta	numerica_minimisation/thomson_circle.py	/^    theta = np.linspace(0, 2 * np.pi, 1000)$/;"	v
+theta_1	numerica_minimisation/drawing_potencial.py	/^theta_1 = np.linspace(0.01, np.pi, 50)$/;"	v
+theta_1	numerica_minimisation/drawing_potencial.py	/^theta_1, phi_1 = np.meshgrid(theta_1,phi_1)$/;"	v
+theta_angles	numerica_minimisation/dipol_quadropol.py	/^    theta_angles = phi_opt[1::2]$/;"	v
+theta_angles	numerica_minimisation/energy_distance.py	/^    theta_angles = phi[1::2]$/;"	v
+theta_angles	numerica_minimisation/thomson_problem.py	/^    theta_angles = phi_opt[1::2]$/;"	v
+times	numerica_minimisation/test.py	/^times = {method: [] for method in methods}$/;"	v
+times_per_method	numerica_minimisation/comparison_algorithm.py	/^times_per_method = {method: [] for method in methods}$/;"	v
+u	numerica_minimisation/thomson_problem.py	/^    u, v = np.mgrid[0:2 * np.pi:100j, 0:np.pi:50j]$/;"	v
+v	numerica_minimisation/thomson_problem.py	/^    u, v = np.mgrid[0:2 * np.pi:100j, 0:np.pi:50j]$/;"	v
+v_0	crazy-driver/code/task1.py	/^v_0 = 1  # Example value for v_0$/;"	v
 v_0	crazy-driver/plots/normal_mode.py	/^v_0 = np.append(v_0,3*l\/t_0)$/;"	v
 v_0	crazy-driver/plots/normal_mode.py	/^v_0 = np.linspace(-50, 150, 27)$/;"	v
 v_0	crazy-driver/plots/normal_mode_a.py	/^v_0 = np.append(v_0,3*l\/t_0)$/;"	v
@@ -139,6 +631,31 @@ v_0	crazy-driver/plots/normal_mode_s.py	/^v_0 = np.append(v_0,3*l\/t_0)$/;"	v
 v_0	crazy-driver/plots/normal_mode_s.py	/^v_0 = np.linspace(-50, 150, 28)$/;"	v
 v_0	crazy-driver/plots/radar.py	/^v_0 = np.linspace(0, 25, 10)$/;"	v
 v_radar	crazy-driver/plots/radar.py	/^v_radar = 40$/;"	v
+x	crazy-driver/code/optimal_driving.py	/^x = np.linspace(0, 1, 100) $/;"	v
+x	crazy-driver/code/task1.py	/^x = np.linspace(0, 1, 100)$/;"	v
+x	numerica_minimisation/drawing_potencial.py	/^x = np.cos(phi_1)*np.sin(theta_1)$/;"	v
+x1	linear_programing/test.py	/^        x1, fun1, slack1, A1, b1, dual1 = solution1$/;"	v
+x2	linear_programing/test.py	/^        x2, fun2, slack2, A2, b2, dual2 = solution2$/;"	v
+x3	linear_programing/test.py	/^        x3, fun3, slack3, A3, b3, dual3 = solution3$/;"	v
+x_0	numerica_minimisation/comparison_algorithm.py	/^    x_0 = np.random.rand(2 * (N - 1)) * 2 * np.pi$/;"	v
+x_0	numerica_minimisation/dipol_quadropol.py	/^    x_0 = np.random.rand(2 * (N - 1)) * 2 * np.pi$/;"	v
+x_0	numerica_minimisation/drawing_potencial.py	/^x_0 = np.random.rand(2 * (N - 1)) $/;"	v
+x_0	numerica_minimisation/energy_distance.py	/^    x_0 = np.random.rand(2 * (N - 1)) * 2 * np.pi$/;"	v
+x_0	numerica_minimisation/energy_over_n.py	/^    x_0 = np.random.rand(2 * (N - 1)) * 2 * np.pi$/;"	v
+x_0	numerica_minimisation/test.py	/^    x_0 = np.random.rand(2 * num_variable)  # Initial angles between 0 and 1$/;"	v
+x_0	numerica_minimisation/thomson_circle.py	/^    x_0 = np.random.rand(N) * 2 * np.pi$/;"	v
+x_0	numerica_minimisation/thomson_circle_energy.py	/^        x_0 = np.random.rand(N) * 2 * np.pi$/;"	v
+x_0	numerica_minimisation/thomson_circle_energy_a_b.py	/^            x_0 = np.random.rand(N) * 2 * np.pi$/;"	v
+x_0	numerica_minimisation/thomson_circle_energy_a_b_n.py	/^        x_0 = np.random.rand(N) * 2 * np.pi$/;"	v
+x_0	numerica_minimisation/thomson_problem.py	/^    x_0 = np.random.rand(2 * (N - 1)) * 2 * np.pi$/;"	v
+x_sphere	numerica_minimisation/thomson_problem.py	/^    x_sphere = np.sin(v) * np.cos(u)$/;"	v
+x_values	linear_programing/test.py	/^x_values = np.linspace(20, 1000, 20)$/;"	v
+y	crazy-driver/code/optimal_driving.py	/^        y = normal(x, s)$/;"	v
+y	crazy-driver/code/optimal_driving.py	/^        y = overshot(x, s)$/;"	v
+y	crazy-driver/code/task1.py	/^        y = normal(x, s)$/;"	v
+y	crazy-driver/code/task1.py	/^        y = overshot(x, s)$/;"	v
+y	numerica_minimisation/drawing_potencial.py	/^y = np.sin(phi_1)*np.sin(theta_1)$/;"	v
+y_sphere	numerica_minimisation/thomson_problem.py	/^    y_sphere = np.sin(v) * np.sin(u)$/;"	v
 y_values	crazy-driver/plots/normal_mode.py	/^        y_values = speed_normal(t, v_0)$/;"	v
 y_values	crazy-driver/plots/normal_mode.py	/^        y_values = speed_under(t, v_0)$/;"	v
 y_values	crazy-driver/plots/normal_mode_a.py	/^        y_values = speed_normal(t, v_0)$/;"	v
@@ -156,3 +673,5 @@ ymin	crazy-driver/plots/normal_mode.py	/^ymin, ymax = plt.ylim()$/;"	v
 ymin	crazy-driver/plots/normal_mode_a.py	/^ymin, ymax = plt.ylim()$/;"	v
 ymin	crazy-driver/plots/normal_mode_a_int.py	/^ymin, ymax = plt.ylim()$/;"	v
 ymin	crazy-driver/plots/radar.py	/^ymin, ymax = plt.ylim()$/;"	v
+z	numerica_minimisation/drawing_potencial.py	/^z = np.cos(theta_1)$/;"	v
+z_sphere	numerica_minimisation/thomson_problem.py	/^    z_sphere = np.cos(v)$/;"	v
